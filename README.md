@@ -262,6 +262,25 @@ import { category } from "data/categories.json";
 import { supplier } from "data/suppliers.json";
 ```
 
+🗝️ **Note on IDs**  
+
+Each imported JSON/BSON source must have a clear identifier field so `$ref` can work.  
+
+- If the file is an **array of objects**, JSON-LOOM looks for `id` first, then falls back to the first field ending in `_id` (e.g., `product_id`, `category_id`, `supplier_id`).  
+- If the file is an **object keyed by IDs**, those keys are used directly as IDs.  
+
+The import alias name (`"product"`, `"category"`, etc.) does **not** have to match the ID field name. For example:
+
+```json
+"$imports": {
+  "lighting_product": "data/products.json"
+}
+
+"product": { "$ref": "lighting_product:1" }
+```
+ 
+This approach works fine, even if the records inside `products.json` use `product_id` as the identifier. The important part is that each record has an ID field and `$ref` uses the right alias.
+
 ---
 
 ### 🧩 `$ref`
