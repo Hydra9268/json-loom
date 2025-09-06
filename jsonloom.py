@@ -1,6 +1,7 @@
 #!
 # jsonloom.py — Strict-JSON preprocessor compiler (no sugar syntax)
 # Copyright 2025 Ryan Allen
+# https://github.com/Hydra9268/json-loom
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
