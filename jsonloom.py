@@ -1,24 +1,35 @@
 #!/usr/bin/env python3
 # jsonloom.py — Strict-JSON preprocessor compiler (no sugar syntax)
 #
+# Now with automatic JSON/BSON support:
+# - Input preprocessor can be .json or .bson
+# - $imports can point to .json or .bson (mixed allowed)
+# - Output format chosen by output filename extension; if omitted, matches input ext
+#
 # Usage:
 #   python jsonloom.py preprocessor.json
 #     -> writes preprocessor.compiled.json
-#   python jsonloom.py preprocessor.json postprocessed.json
+#   python jsonloom.py preprocessor.bson
+#     -> writes preprocessor.compiled.bson
+#   python jsonloom.py preprocessor.json compiled.bson
+#     -> writes compiled.bson
 #
-# Authoring format (strict JSON):
+# Options:
+#   --strict-projection   Error if $pick references missing fields (default: warn)
+#   --indent N            JSON indent for output (default: 2; ignored for BSON)
+#
+# Authoring format (strict authoring semantics; JSON/BSON supported):
 # {
 #   "$imports": {
 #     "product": "data/products.json",
 #     "category": "data/categories.json",
-#     "supplier": "data/suppliers.json"
+#     "supplier": "data/suppliers.bson"
 #   },
-#   "product": { "$ref": "product:1" },
-#   "category": { "$ref": "category:10" },
+#   "product":  { "$ref": "product: 1" },
+#   "category": { "$ref": "category :10" },
 #   "supplier": {
-#     "$ref": "supplier:100",
-#     "$pick": { "supplier_name": "name" },
-#     "$mode": "inline"
+#     "$ref": "supplier  :   100",
+#     "$pick": { "supplier_name": "name", "contact_email": "email" }
 #   }
 # }
 
@@ -32,6 +43,18 @@ import sys
 from copy import deepcopy
 from typing import Any, Dict, List, Mapping
 
+# Optional BSON support
+_HAS_BSON = True
+try:
+    # pymongo's bson (preferred)
+    from bson import BSON, decode_all  # type: ignore
+except Exception:
+    try:
+        # standalone 'bson' package fallback
+        from bson import BSON, decode_all  # type: ignore
+    except Exception:
+        _HAS_BSON = False
+
 Alias = str
 IdStr = str
 Index = Dict[IdStr, Any]
@@ -44,20 +67,81 @@ def eprint(*args, **kwargs):
 
 ALIAS_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_]*$")
 
+# Whitespace-tolerant $ref like "alias:id", "alias :   id"
+REF_RE = re.compile(r"""^\s*([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.+?)\s*$""")
+
 
 def validate_alias(alias: str) -> None:
     if not ALIAS_RE.match(alias):
         raise ValueError(f"Invalid import alias '{alias}'. Use [A-Za-z][A-Za-z0-9_]*")
 
 
-def load_json(path: str) -> Any:
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"File not found: {path}")
-    except json.JSONDecodeError as ex:
-        raise ValueError(f"Invalid JSON in '{path}': {ex}")
+def _ext(path: str) -> str:
+    return os.path.splitext(path)[1].lower()
+
+
+def load_any(path: str) -> Any:
+    """Load a .json (text) or .bson (binary) file, return parsed object (dict/array)."""
+    ext = _ext(path)
+    if ext == ".json":
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {path}")
+        except json.JSONDecodeError as ex:
+            raise ValueError(f"Invalid JSON in '{path}': {ex}")
+
+    elif ext == ".bson":
+        if not _HAS_BSON:
+            raise RuntimeError(
+                f"Cannot read BSON '{path}': 'bson' package not installed. "
+                f"Install via 'pip install pymongo' (or 'pip install bson')."
+            )
+        try:
+            with open(path, "rb") as f:
+                data = f.read()
+            # Try to decode a single document first; if that fails, fall back to decode_all
+            try:
+                return BSON(data).decode()
+            except Exception:
+                docs = decode_all(data)
+                if len(docs) == 1:
+                    return docs[0]
+                return docs  # list of docs
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {path}")
+        except Exception as ex:
+            raise ValueError(f"Invalid BSON in '{path}': {ex}")
+
+    else:
+        raise ValueError(f"Unsupported file extension for '{path}'. Use .json or .bson")
+
+
+def write_any(path: str, obj: Any, indent: int = 2) -> None:
+    """Write obj to .json (text) or .bson (binary) based on extension."""
+    ext = _ext(path)
+    if ext == ".json":
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(obj, f, ensure_ascii=False, indent=indent)
+            f.write("\n")
+    elif ext == ".bson":
+        if not _HAS_BSON:
+            raise RuntimeError(
+                f"Cannot write BSON '{path}': 'bson' package not installed. "
+                f"Install via 'pip install pymongo' (or 'pip install bson')."
+            )
+        # Ensure we're writing a single document (dict). If obj is a list, wrap or error.
+        if isinstance(obj, list):
+            # You can change this behavior if you want to permit top-level arrays in BSON.
+            raise ValueError(
+                "BSON output expects a single document (object), but got a list. "
+                "Wrap your output or export to .json instead."
+            )
+        with open(path, "wb") as f:
+            f.write(BSON.encode(obj))
+    else:
+        raise ValueError(f"Unsupported output extension for '{path}'. Use .json or .bson")
 
 
 def infer_id_field_from_array(arr: List[Mapping[str, Any]]) -> str | None:
@@ -102,14 +186,11 @@ def index_import(alias: str, raw: Any) -> Index:
     raise ValueError(f"Import '{alias}': must be an object or an array")
 
 
-REF_RE = re.compile(r"""^\s*([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.+?)\s*$""")
-
-
 def parse_ref(s: str) -> tuple[str, str]:
     """
-    Parse $ref strings like 'alias:id' while ignoring any surrounding whitespace.
+    Parse $ref strings like 'alias:id' while ignoring surrounding whitespace.
     Accepts: 'alias:id', 'alias:  id', ' alias :   id  '.
-    Returns (alias, id) with both parts trimmed.
+    Returns (alias, id) trimmed.
     """
     m = REF_RE.match(s)
     if not m:
@@ -123,7 +204,7 @@ def parse_ref(s: str) -> tuple[str, str]:
 
 
 def make_link(obj: Mapping[str, Any]) -> Dict[str, Any]:
-    # Prefer exact 'id', otherwise first '*_id'
+    # Prefer 'id', else first '*_id'
     if "id" in obj:
         return {"id": obj["id"]}
     for k in obj.keys():
@@ -185,7 +266,7 @@ def resolve_node(
             seen_stack.pop()
             return final
 
-        # Regular object: recurse props
+        # Regular object: recurse
         out: Dict[str, Any] = {}
         for k, v in node.items():
             out[k] = resolve_node(v, indexes, seen_stack, strict_projection)
@@ -197,7 +278,7 @@ def resolve_node(
 
 def compile_strict(author_doc: Mapping[str, Any], base_dir: str, strict_projection: bool) -> Any:
     if not isinstance(author_doc, dict):
-        raise ValueError("Root document must be a JSON object")
+        raise ValueError("Root document must be a JSON/BSON object")
 
     imports = author_doc.get("$imports", {})
     if not isinstance(imports, dict):
@@ -210,10 +291,10 @@ def compile_strict(author_doc: Mapping[str, Any], base_dir: str, strict_projecti
         if not isinstance(rel_path, str) or not rel_path.strip():
             raise ValueError(f"$imports['{alias}'] must be a non-empty string path")
         abs_path = os.path.normpath(os.path.join(base_dir, rel_path))
-        raw = load_json(abs_path)
+        raw = load_any(abs_path)
         indexes[alias] = index_import(alias, raw)
 
-    # Remove $imports from the root before resolution
+    # Remove $imports from root before resolution
     author_copy = {k: v for k, v in author_doc.items() if k != "$imports"}
 
     return resolve_node(author_copy, indexes, seen_stack=[], strict_projection=strict_projection)
@@ -221,13 +302,13 @@ def compile_strict(author_doc: Mapping[str, Any], base_dir: str, strict_projecti
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Compile a strict-JSON preprocessor file by resolving $imports and $ref."
+        description="Compile a strict authoring file by resolving $imports and $ref (JSON/BSON)."
     )
-    ap.add_argument("input", help="Path to preprocessor JSON file")
+    ap.add_argument("input", help="Path to preprocessor file (.json or .bson)")
     ap.add_argument(
         "output",
         nargs="?",
-        help="Optional output path. If omitted, writes <input>.compiled.json",
+        help="Optional output path (.json or .bson). If omitted, writes <input>.compiled.<ext>",
     )
     ap.add_argument(
         "--strict-projection",
@@ -238,7 +319,7 @@ def main():
         "--indent",
         type=int,
         default=2,
-        help="JSON indent for output (default: 2)",
+        help="JSON indent for output (default: 2; ignored for BSON)",
     )
     args = ap.parse_args()
 
@@ -249,26 +330,27 @@ def main():
 
     base_dir = os.path.dirname(input_path) or "."
     try:
-        author_doc = load_json(input_path)
+        author_doc = load_any(input_path)
         compiled = compile_strict(
             author_doc,
             base_dir=base_dir,
             strict_projection=args.strict_projection,
         )
     except Exception as ex:
-        eprint(f"[weave error] {ex}")
+        eprint(f"[loom error] {ex}")
         sys.exit(1)
 
+    # Decide output path + extension
     if args.output:
         output_path = args.output
     else:
         root, ext = os.path.splitext(input_path)
-        output_path = f"{root}.compiled.json"
+        # mirror the input extension; default to .json if unknown
+        out_ext = ext.lower() if ext.lower() in (".json", ".bson") else ".json"
+        output_path = f"{root}.compiled{out_ext}"
 
     try:
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(compiled, f, ensure_ascii=False, indent=args.indent)
-            f.write("\n")
+        write_any(output_path, compiled, indent=args.indent)
     except Exception as ex:
         eprint(f"Failed to write '{output_path}': {ex}")
         sys.exit(1)

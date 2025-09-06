@@ -10,5 +10,11 @@
   "supplier": {
     "name": "Acme Corp",
     "email": "info@acme.com"
+  },
+  "app_branding": {
+    "primary_logo": {
+      "brand": "Acorn Systems",
+      "image": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottQAAAABJRU5ErkJggg=="
+    }
   }
 }
