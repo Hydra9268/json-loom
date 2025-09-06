@@ -5,20 +5,20 @@
 ## 📑 Table of Contents
 
 - [🎯 Description](#-description)
-- ✨ [Features](#features)
-- 📦 [Example](#example)
-- ⚙️ [Usage](#usage)
-- 💾 [Working with BSON and Binary Data](#working-with-bson-and-binary-data)
-  - 🖼️ [Binary data](#binary-data)
-  - 🧭 [Design Decision](#design-decision)
-- 📜 [Syntax](#syntax)
-  - 🔗 [`$imports`](#imports)
-  - 🧩 [`$ref`](#ref)
-  - ✂️ [`$pick`](#pick)
-  - 🪢 [`$mode: "link"`](#mode-link)
-- 📥 [Installation](#installation)
-- 📂 [Recommended File Structure](#recommended-file-structure)
-- ⚖️ [License](#license)
+- [✨ Features](#-features)
+- [📦 Example](#-example)
+- [⚙️ Usage](#-usage)
+- [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
+  - [🖼️ Binary data](#-binary-data)
+  - [🧭 Design Decision](#-design-decision)
+- [📜 Syntax](#-syntax)
+  - [🔗 `$imports`](#-imports)
+  - [🧩 `$ref`](#-ref)
+  - [✂️ `$pick`](#-pick)
+  - [🪢 `$mode: "link"`](#-mode-link)
+- [📥 Installation](#-installation)
+- [📂 Recommended File Structure](#-recommended-file-structure)
+- [⚖️ License](#-license)
 
 ---
 
@@ -42,7 +42,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 
 ---
 
-## Example
+## 📦 Example
 
 **data/products.json**
 ```json
@@ -131,7 +131,7 @@ Output (`preprocessor.compiled.json`):
 
 ---
 
-## Usage
+## ⚙️ Usage
 
 ```bash
 python jsonloom.py <input.json|.bson> [output.json|.bson]
@@ -147,14 +147,14 @@ Options:
 
 ---
 
-## Working with BSON and Binary Data
+## 💾 Working with BSON and Binary Data
 
 JSON-LOOM supports both **JSON** and **BSON** as input and output formats:
 
 - `.json` → standard JSON, portable and human-readable
 - `.bson` → MongoDB’s binary JSON, efficient and compact
 
-### Binary data
+### 🖼️ Binary data
 
 Because JSON does not support raw binary, binary fields must be stored as **base64 strings** when working with `.json` files:
 
@@ -174,7 +174,7 @@ If you import from `.bson` files that contain true `Binary` values:
 
 ---
 
-### Design Decision
+### 🧭 Design Decision
 
 JSON-LOOM defaults to **base64-in-JSON** for binary data in examples.
 Why?
@@ -187,11 +187,11 @@ Native BSON binary is still supported for advanced users who need efficiency in 
 
 ---
 
-## Syntax
+## 📜 Syntax
 
 Preprocessor files are strict JSON documents with a few special keywords.  
 
-### `$imports`
+### 🔗 `$imports`
 Defines which relational JSON sources to load. Keys are **aliases** (used in `$ref`), and 
 values are file paths relative to the preprocessor file.
 
@@ -206,7 +206,7 @@ values are file paths relative to the preprocessor file.
 
 ---
 
-### `$ref`
+### 🧩 `$ref`
 
 References a record from an imported file.
 Format: `"alias:id"` — whitespace around the alias or id is ignored.
@@ -219,7 +219,7 @@ Format: `"alias:id"` — whitespace around the alias or id is ignored.
 
 ---
 
-### `$pick`
+### ✂️ `$pick`
 
 Optional projection/renaming. Maps fields in the source record to new keys in the compiled output.
 
@@ -241,7 +241,7 @@ Output:
 
 ---
 
-### `$mode: "link"`
+### 🪢 `$mode: "link"`
 
 Instead of embedding the full record, `$mode: "link"` reduces the output to just the ID field.
 
@@ -257,7 +257,7 @@ Output:
 
 ---
 
-## Installation
+## 📥 Installation
 
 No dependencies, just Python 3.9+:
 
@@ -269,7 +269,7 @@ python jsonloom.py preprocessor.json
 
 ---
 
-### Recommended File Structure
+### 📂 Recommended File Structure
 
 To keep projects organized, we suggest separating your **relational JSON sources** 
 (products, categories, suppliers, etc.) from your **preprocessor JSON files** 
@@ -294,7 +294,7 @@ json-loom/
 
 ---
 
-## License
+## ⚖️ License
 
 MIT License
 
