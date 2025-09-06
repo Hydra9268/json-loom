@@ -9,6 +9,7 @@
 - [🎯 Description](#-description)
 - [✨ Features](#-features)
 - [📦 Example](#-example)
+- [🖼️ Visual Overview](#-visual-overview)
 - [⚙️ Usage](#-usage)
 - [▶ Next Steps: Using Compiled Documents](#-next-steps-using-compiled-documents)
 - [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
@@ -150,6 +151,12 @@ Output (`preprocessor.compiled.json`):
   }
 }
 ```
+
+---
+
+## 🖼️ Visual Overview
+
+The diagram below shows how JSON-LOOM stitches relational JSON sources into a single compiled document:
 
 <img src="https://hydra9268.github.io/json-loom/assets/flow-chart.png"/>
 
