@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/DGGMJ4G.png"/>
+  <img src="https://hydra9268.github.io/json-loom/assets/json-loom-logo-2.2.png"/>
   <h1>JSON-LOOM</h1>
   <h3>Weave relational JSON into denormalized documents.<br>A preprocessor for document databases.</h3>
 </div>
