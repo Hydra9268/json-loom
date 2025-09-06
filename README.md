@@ -151,6 +151,8 @@ Output (`preprocessor.compiled.json`):
 }
 ```
 
+<img src="https://hydra9268.github.io/json-loom/assets/flow-chart.png"/>
+
 ---
 
 ## ⚙️ Usage
