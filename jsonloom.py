@@ -5,7 +5,7 @@
 # - Input preprocessor can be .json or .bson
 # - $imports can point to .json or .bson (mixed allowed)
 # - Output format chosen by output filename extension; if omitted, matches input ext
-# - Supports $ref lookups, $pick projections/renaming, and circular reference detection
+# - Supports $ref lookups, $alias projections/renaming, and circular reference detection
 #
 # Usage:
 #   python jsonloom.py preprocessor.json
@@ -16,7 +16,7 @@
 #     -> writes compiled.bson
 #
 # Options:
-#   --strict-projection   Error if $pick references missing fields (default: warn)
+#   --strict-projection   Error if $alias references missing fields (default: warn)
 #   --indent N            JSON indent for output (default: 2; ignored for BSON)
 #   --base64-binary       When writing JSON, convert BSON Binary values to base64 strings
 #
@@ -31,7 +31,7 @@
 #   "category": { "$ref": "category :10" },
 #   "supplier": {
 #     "$ref": "supplier  :   100",
-#     "$pick": { "supplier_name": "name", "contact_email": "email" }
+#     "$alias": { "supplier_name": "name", "contact_email": "email" }
 #   }
 # }
 
@@ -43,6 +43,7 @@ import json
 import os
 import re
 import sys
+import base64
 from copy import deepcopy
 from typing import Any, Dict, List, Mapping
 
@@ -50,13 +51,14 @@ from typing import Any, Dict, List, Mapping
 _HAS_BSON = True
 try:
     # pymongo's bson (preferred)
-    from bson import BSON, decode_all  # type: ignore
+    from bson import BSON, decode_all, Binary as BSONBinary  # type: ignore
 except Exception:
     try:
         # standalone 'bson' package fallback
-        from bson import BSON, decode_all  # type: ignore
+        from bson import BSON, decode_all, Binary as BSONBinary  # type: ignore
     except Exception:
         _HAS_BSON = False
+        BSONBinary = None  # type: ignore
 
 Alias = str
 IdStr = str
@@ -121,12 +123,33 @@ def load_any(path: str) -> Any:
         raise ValueError(f"Unsupported file extension for '{path}'. Use .json or .bson")
 
 
-def write_any(path: str, obj: Any, indent: int = 2) -> None:
+def _to_json_safe(obj: Any, base64_binary: bool) -> Any:
+    """
+    Recursively convert a Python object to something json.dump can handle.
+    If base64_binary=True, BSON Binary values become base64 strings.
+    Otherwise, encountering a Binary will raise a TypeError.
+    """
+    if _HAS_BSON and BSONBinary is not None and isinstance(obj, BSONBinary):
+        if base64_binary:
+            return base64.b64encode(bytes(obj)).decode("ascii")
+        raise TypeError(
+            "Encountered BSON Binary while writing JSON. Use --base64-binary or output .bson"
+        )
+
+    if isinstance(obj, dict):
+        return {k: _to_json_safe(v, base64_binary) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_to_json_safe(v, base64_binary) for v in obj]
+    return obj
+
+
+def write_any(path: str, obj: Any, indent: int = 2, base64_binary: bool = False) -> None:
     """Write obj to .json (text) or .bson (binary) based on extension."""
     ext = _ext(path)
     if ext == ".json":
+        safe = _to_json_safe(obj, base64_binary)
         with open(path, "w", encoding="utf-8") as f:
-            json.dump(obj, f, ensure_ascii=False, indent=indent)
+            json.dump(safe, f, ensure_ascii=False, indent=indent)
             f.write("\n")
     elif ext == ".bson":
         if not _HAS_BSON:
@@ -134,9 +157,7 @@ def write_any(path: str, obj: Any, indent: int = 2) -> None:
                 f"Cannot write BSON '{path}': 'bson' package not installed. "
                 f"Install via 'pip install pymongo' (or 'pip install bson')."
             )
-        # Ensure we're writing a single document (dict). If obj is a list, wrap or error.
         if isinstance(obj, list):
-            # You can change this behavior if you want to permit top-level arrays in BSON.
             raise ValueError(
                 "BSON output expects a single document (object), but got a list. "
                 "Wrap your output or export to .json instead."
@@ -206,17 +227,17 @@ def parse_ref(s: str) -> tuple[str, str]:
     return alias, id_
 
 
-def apply_pick(
+def apply_alias(
     obj: Mapping[str, Any],
-    pick: Mapping[str, str] | None,
+    alias: Mapping[str, str] | None,
     strict_projection: bool,
 ) -> Dict[str, Any]:
-    if not pick:
+    if not alias:
         return dict(obj)
     out: Dict[str, Any] = {}
-    for src, dst in pick.items():
+    for src, dst in alias.items():
         if src not in obj:
-            msg = f"Projection: field '{src}' not found"
+            msg = f"Alias: field '{src}' not found"
             if strict_projection:
                 raise ValueError(msg)
             eprint("[weave warning]", msg)
@@ -253,8 +274,8 @@ def resolve_node(
 
             seen_stack.append(key)
             base = deepcopy(rec)
-            picked = apply_pick(base, node.get("$pick"), strict_projection)
-            resolved = picked
+            aliased = apply_alias(base, node.get("$alias"), strict_projection)
+            resolved = aliased
             final = resolve_node(resolved, indexes, seen_stack, strict_projection)
             seen_stack.pop()
             return final
@@ -306,13 +327,18 @@ def main():
     ap.add_argument(
         "--strict-projection",
         action="store_true",
-        help="Error on missing fields referenced in $pick",
+        help="Error on missing fields referenced in $alias",
     )
     ap.add_argument(
         "--indent",
         type=int,
         default=2,
         help="JSON indent for output (default: 2; ignored for BSON)",
+    )
+    ap.add_argument(
+        "--base64-binary",
+        action="store_true",
+        help="When writing JSON, convert BSON Binary values to base64 strings",
     )
     args = ap.parse_args()
 
@@ -343,7 +369,7 @@ def main():
         output_path = f"{root}.compiled{out_ext}"
 
     try:
-        write_any(output_path, compiled, indent=args.indent)
+        write_any(output_path, compiled, indent=args.indent, base64_binary=args.base64_binary)
     except Exception as ex:
         eprint(f"Failed to write '{output_path}': {ex}")
         sys.exit(1)

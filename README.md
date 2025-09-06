@@ -16,7 +16,7 @@
 - [📜 Syntax](#-syntax)
   - [🔗 `$imports`](#-imports)
   - [🧩 `$ref`](#-ref)
-  - [✂️ `$pick`](#-pick)
+  - [✂️ `$alias`](#-pick)
 - [📥 Installation](#-installation)
 - [📂 Recommended File Structure](#-recommended-file-structure)
 - [⚖️ License](#-license)
@@ -39,11 +39,11 @@ document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass fo
 
 - `$imports` for relational JSON or BSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
-- `$pick` to project/rename fields
+- `$alias` to project/rename fields
 - Detects circular references and missing IDs
 - Validates aliases, IDs, and prevents duplicates
 - Works with arrays (`[{...}]`) or object-maps (`{ "id": {...} }`)
-- Optional `--strict-projection` for safe `$pick`
+- Optional `--strict-projection` for safe `$alias`
 - Compile output to either `.json` or `.bson`
 
 ---
@@ -106,12 +106,12 @@ document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass fo
   "category": { "$ref": "category: 10" },
   "supplier": {
     "$ref": "supplier : 100",
-    "$pick": { "supplier_name": "name", "contact_email": "email" }
+    "$alias": { "supplier_name": "name", "contact_email": "email" }
   },
   "app_branding": {
     "primary_logo": { 
       "$ref": "logo :    1", 
-      "$pick": { "brand": "brand", "data_base64": "image" }
+      "$alias": { "brand": "brand", "data_base64": "image" }
     }
   }  
 }
@@ -162,7 +162,7 @@ python jsonloom.py <input.json|.bson> [output.json|.bson] [options]
 
 Options (can be combined in any order):
 
-* `--strict-projection` → error if `$pick` references fields that don’t exist (default: warn only)
+* `--strict-projection` → error if `$alias` references fields that don’t exist (default: warn only)
 * `--indent N` → set JSON output indentation (default: 2; use 0 for minified output; ignored for BSON)
 * `--base64-binary` → when writing JSON, BSON Binary values are automatically converted to base64 strings
 
@@ -265,14 +265,14 @@ SELECT * FROM suppliers WHERE supplier_id = 100;
 
 ---
 
-### ✂️ `$pick`
+### ✂️ `$alias`
 
 Optional projection/renaming. Maps fields in the source record to new keys in the compiled output.
 
 ```json
 "supplier": {
   "$ref": "supplier:100",
-  "$pick": { "supplier_name": "name", "contact_email": "email" }
+  "$alias": { "supplier_name": "name", "contact_email": "email" }
 }
 ```
 

@@ -9,12 +9,12 @@
   "category": { "$ref": "category: 10" },
   "supplier": {
     "$ref": "supplier: 100",
-    "$pick": { "supplier_name": "name", "contact_email": "email" }
+    "$alias": { "supplier_name": "name", "contact_email": "email" }
   },
   "app_branding": {
     "primary_logo": { 
       "$ref": "logo: 1", 
-      "$pick": { "brand": "brand", "data_base64": "image" }
+      "$alias": { "brand": "brand", "data_base64": "image" }
     }
   }  
 }
