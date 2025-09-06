@@ -96,6 +96,75 @@ Options:
 
 ---
 
+## Syntax
+
+Preprocessor files are strict JSON documents with a few special keywords.  
+
+### `$imports`
+Defines which relational JSON sources to load. Keys are **aliases** (used in `$ref`), and 
+values are file paths relative to the preprocessor file.
+
+```json
+"$imports": {
+  "product": "data/products.json",
+  "category": "data/categories.json",
+  "supplier": "data/suppliers.json"
+}
+````
+
+---
+
+### `$ref`
+
+References a record from an imported file.
+Format: `"alias:id"` — whitespace around the alias or id is ignored.
+
+```json
+"product": { "$ref": "product:1" },
+"category": { "$ref": "category: 10" },
+"supplier": { "$ref": "supplier  :   100" }
+```
+
+---
+
+### `$pick`
+
+Optional projection/renaming. Maps fields in the source record to new keys in the compiled output.
+
+```json
+"supplier": {
+  "$ref": "supplier:100",
+  "$pick": { "supplier_name": "name", "contact_email": "email" }
+}
+```
+
+Output:
+
+```json
+"supplier": {
+  "name": "Acme Corp",
+  "email": "info@acme.com"
+}
+```
+
+---
+
+### `$mode: "link"`
+
+Instead of embedding the full record, `$mode: "link"` reduces the output to just the ID field.
+
+```json
+"product": { "$ref": "product:1", "$mode": "link" }
+```
+
+Output:
+
+```json
+"product": { "product_id": 1 }
+```
+
+---
+
 ## Installation
 
 No dependencies, just Python 3.9+:
@@ -108,7 +177,7 @@ python script.py examples/preprocessor.json
 
 ---
 
-### ✅ Recommended File Structure
+### Recommended File Structure
 
 To keep projects organized, we suggest separating your **relational JSON sources** 
 (products, categories, suppliers, etc.) from your **preprocessor JSON files** 
@@ -119,12 +188,11 @@ Example layout:
 ```
 json-loom/
 ├── script.py
-├── examples/
-│   ├── preprocessor.json
-│   └── data/
-│       ├── products.json
-│       ├── categories.json
-│       └── suppliers.json
+├── preprocessor.json
+└── data/
+    ├── products.json
+    ├── categories.json
+    └── suppliers.json
 ```
 
 - Place normalized/relational JSON files inside a `data/` folder (or any folder you prefer).
