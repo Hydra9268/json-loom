@@ -21,7 +21,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 
 ## Example
 
-**products.json**
+**data/products.json**
 ```json
 [
   { "product_id": 1, "name": "t-shirt" },
@@ -29,7 +29,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 ]
 ````
 
-**categories.json**
+**data/categories.json**
 
 ```json
 [
@@ -37,7 +37,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 ]
 ```
 
-**suppliers.json**
+**data/suppliers.json**
 
 ```json
 [
