@@ -1,0 +1,20 @@
+{
+"product": {
+"product_id": 1,
+"name": "t-shirt"
+},
+"category": {
+"category_id": 10,
+"category_name": "apparel"
+},
+"supplier": {
+"name": "Acme Corp",
+"email": "info@acme.com"
+},
+"app_branding": {
+"primary_logo": {
+"brand": "Acorn Systems",
+"image": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottQAAAABJRU5ErkJggg=="
+}
+}
+}

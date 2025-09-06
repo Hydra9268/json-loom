@@ -123,9 +123,24 @@ Output (`preprocessor.compiled.json`):
 
 ```json
 {
-  "product": { "product_id": 1, "name": "t-shirt" },
-  "category": { "category_id": 10, "category_name": "apparel" },
-  "supplier": { "name": "Acme Corp", "email": "info@acme.com" }
+  "product": {
+    "product_id": 1,
+    "name": "t-shirt"
+  },
+  "category": {
+    "category_id": 10,
+    "category_name": "apparel"
+  },
+  "supplier": {
+    "name": "Acme Corp",
+    "email": "info@acme.com"
+  },
+  "app_branding": {
+    "primary_logo": {
+      "brand": "Acorn Systems",
+      "image": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottQAAAABJRU5ErkJggg=="
+    }
+  }
 }
 ```
 
@@ -134,12 +149,12 @@ Output (`preprocessor.compiled.json`):
 ## ⚙️ Usage
 
 ```bash
-python jsonloom.py <input.json|.bson> [output.json|.bson]
+python jsonloom.py <input.json|.bson> [output.json|.bson] [options]
 
 # If output is omitted, writes <input>.compiled.json (or .bson if input was .bson)
 ```
 
-Options:
+Options (can be combined in any order):
 
 * `--strict-projection` → error if `$pick` references fields that don’t exist (default: warn only)
 * `--indent N` → set JSON output indentation (default: 2; use 0 for minified output; ignored for BSON)
