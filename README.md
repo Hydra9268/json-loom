@@ -63,6 +63,8 @@ write once, keep it DRY, and compile to ready-to-use output.
 }
 ```
 
+(Note: whitespace around the alias or id is ignored)
+
 Run:
 
 ```bash
