@@ -134,24 +134,6 @@ json-loom/
 
 ---
 
-### ✅ Step 4: Commit & Push
-
-1. Add README.md, LICENSE, examples/
-2. In GitHub Desktop → Commit → Push origin
-3. On GitHub, your repo will now have a proper front page.
-
----
-
-### ✅ Step 5: (Optional) First Release
-
-On GitHub → Releases → “Draft a new release”
-
-* Tag: `v0.1.0`
-* Title: *Initial release*
-* Body: “First working version of JSON-LOOM. Supports `$imports`, `$ref`,
-
----
-
 ## License
 
 MIT License
