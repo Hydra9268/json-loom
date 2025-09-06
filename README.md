@@ -221,10 +221,19 @@ values are file paths relative to the preprocessor file.
 ```json
 "$imports": {
   "product": "data/products.json",
-  "category": "data/logos.json",
+  "logo": "data/logos.json",
   "category": "data/categories.json",
   "supplier": "data/suppliers.json"
 }
+```
+
+**Is like (JavaScript / ES Modules):**
+
+```js
+import { product } from "data/products.json";
+import { logo } from "data/suppliers.json";
+import { category } from "data/categories.json";
+import { supplier } from "data/suppliers.json";
 ```
 
 ---
@@ -238,6 +247,13 @@ Format: `"alias:id"` — whitespace around the alias or id is ignored.
 "product": { "$ref": "product:1" },
 "category": { "$ref": "category: 10" },
 "supplier": { "$ref": "supplier  :   100" }
+```
+
+**Is like (SQL primary key lookup / foreign key dereference):**
+
+```sql
+SELECT * FROM products WHERE product_id = 1;
+SELECT * FROM suppliers WHERE supplier_id = 100;
 ```
 
 ---
@@ -262,6 +278,13 @@ Output:
 }
 ```
 
+**Is like (SQL SELECT aliasing):**
+
+```sql
+SELECT supplier_name AS name, contact_email AS email
+FROM suppliers WHERE supplier_id = 100;
+```
+
 ---
 
 ### 🪢 `$mode: "link"`
@@ -276,6 +299,13 @@ Output:
 
 ```json
 "product": { "product_id": 1 }
+```
+
+**Is like (SQL foreign key storage):**
+
+```sql
+-- Store only the foreign key reference, without joining the related row
+INSERT INTO orders (product_id) VALUES (1);
 ```
 
 ---
