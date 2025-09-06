@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
-# script.py — Strict-JSON preprocessor compiler (no sugar syntax)
+# jsonloom.py — Strict-JSON preprocessor compiler (no sugar syntax)
 #
 # Usage:
-#   python script.py preprocessor.json
+#   python jsonloom.py preprocessor.json
 #     -> writes preprocessor.compiled.json
-#   python script.py preprocessor.json postprocessed.json
+#   python jsonloom.py preprocessor.json postprocessed.json
 #
 # Authoring format (strict JSON):
 # {
-#   "$imports": { "product": "products.json", "category": "categories.json" },
+#   "$imports": {
+#     "product": "data/products.json",
+#     "category": "data/categories.json",
+#     "supplier": "data/suppliers.json"
+#   },
 #   "product": { "$ref": "product:1" },
-#   "supplier": { "$ref": "supplier:100", "$pick": { "supplier_name": "name" }, "$mode": "inline" }
+#   "category": { "$ref": "category:10" },
+#   "supplier": {
+#     "$ref": "supplier:100",
+#     "$pick": { "supplier_name": "name" },
+#     "$mode": "inline"
+#   }
 # }
 
 from __future__ import annotations
