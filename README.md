@@ -234,6 +234,15 @@ import { category } from "data/categories.json";
 import { supplier } from "data/suppliers.json";
 ```
 
+**Is like (SQL table aliases):**
+
+```sql
+FROM products   AS product,
+     logos      AS logo,
+     categories AS category,
+     suppliers  AS supplier
+```
+
 ---
 
 ### 🧩 `$ref`
