@@ -24,9 +24,9 @@
 
 ## 🎯 Description
 
-JSON-LOOM is a lightweight preprocessor that lets you author **normalized JSON** 
-(similar to relational tables) and compile it into **flat, document-friendly JSON** 
-optimized for document databases like MongoDB. Think of it as **Sass for JSON**: 
+JSON-LOOM is a lightweight preprocessor that lets you author **normalized JSON** (similar to 
+relational tables) and compile it into **flat, document-friendly JSON** optimized for 
+document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass for JSON**: 
 write once, keep it DRY, and compile to ready-to-use output.
 
 ---
