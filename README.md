@@ -73,15 +73,15 @@ write once, keep it DRY, and compile to ready-to-use output.
     "supplier": "data/suppliers.json",
     "logo": "data/logos.json"
   },
-  "product": { "$ref": "product: 1" },
+  "product": { "$ref": "product:1" },
   "category": { "$ref": "category: 10" },
   "supplier": {
-    "$ref": "supplier: 100",
+    "$ref": "supplier : 100",
     "$pick": { "supplier_name": "name", "contact_email": "email" }
   },
   "app_branding": {
     "primary_logo": { 
-      "$ref": "logo: 1", 
+      "$ref": "logo :    1", 
       "$pick": { "brand": "brand", "data_base64": "image" }
     }
   }  
