@@ -2,6 +2,28 @@
 
 *Weave relational JSON into denormalized documents.*
 
+## 📑 Table of Contents
+
+- ℹ [Description](#Description)
+- ✨ [Features](#features)
+- 📦 [Example](#example)
+- ⚙️ [Usage](#usage)
+- 💾 [Working with BSON and Binary Data](#working-with-bson-and-binary-data)
+  - 🖼️ [Binary data](#binary-data)
+  - 🧭 [Design Decision](#design-decision)
+- 📜 [Syntax](#syntax)
+  - 🔗 [`$imports`](#imports)
+  - 🧩 [`$ref`](#ref)
+  - ✂️ [`$pick`](#pick)
+  - 🪢 [`$mode: "link"`](#mode-link)
+- 📥 [Installation](#installation)
+- 📂 [Recommended File Structure](#recommended-file-structure)
+- ⚖️ [License](#license)
+
+---
+
+## Description
+
 JSON-LOOM is a lightweight preprocessor that lets you author **normalized JSON** 
 (similar to relational tables) and compile it into **flat, document-friendly JSON** 
 optimized for document databases like MongoDB. Think of it as **Sass for JSON**: 
@@ -10,6 +32,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 ---
 
 ## Features
+
 - `$imports` for relational JSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
 - `$pick` to project/rename fields
