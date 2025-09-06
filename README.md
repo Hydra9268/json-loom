@@ -27,13 +27,31 @@ write once, keep it DRY, and compile to ready-to-use output.
   { "product_id": 1, "name": "t-shirt" },
   { "product_id": 2, "name": "pants" }
 ]
-````
+```
 
 **data/categories.json**
 
 ```json
 [
   { "category_id": 10, "category_name": "apparel" }
+]
+```
+**data/logos.json**
+
+```json
+[
+  {
+    "logo_id": 1,
+    "brand": "Acorn Systems",
+    "mime_type": "image/png",
+    "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottQAAAABJRU5ErkJggg=="
+  },
+  {
+    "logo_id": 2,
+    "brand": "Blue Meadow",
+    "mime_type": "image/png",
+    "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR4nGP8z8AARAwMDIxBAAAgPgD13e9QYQAAAABJRU5ErkJggg=="
+  }
 ]
 ```
 
@@ -52,14 +70,21 @@ write once, keep it DRY, and compile to ready-to-use output.
   "$imports": {
     "product": "data/products.json",
     "category": "data/categories.json",
-    "supplier": "data/suppliers.json"
+    "supplier": "data/suppliers.json",
+    "logo": "data/logos.json"
   },
-  "product": { "$ref": "product:1" },
+  "product": { "$ref": "product: 1" },
   "category": { "$ref": "category: 10" },
   "supplier": {
-    "$ref": "supplier  :   100",
+    "$ref": "supplier: 100",
     "$pick": { "supplier_name": "name", "contact_email": "email" }
-  }
+  },
+  "app_branding": {
+    "primary_logo": { 
+      "$ref": "logo: 1", 
+      "$pick": { "brand": "brand", "data_base64": "image" }
+    }
+  }  
 }
 ```
 
@@ -68,7 +93,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 Run:
 
 ```bash
-python script.py examples/preprocessor.json
+python jsonloom.py examples/preprocessor.json
 ```
 
 Output (`preprocessor.compiled.json`):
@@ -86,15 +111,56 @@ Output (`preprocessor.compiled.json`):
 ## Usage
 
 ```bash
-python script.py <input.json> [output.json]
+python jsonloom.py <input.json|.bson> [output.json|.bson]
 
-# If output is omitted, writes <input>.compiled.json
+# If output is omitted, writes <input>.compiled.json (or .bson if input was .bson)
 ```
 
 Options:
 
 * `--strict-projection` → error if `$pick` references fields that don’t exist (default: warn only)
-* `--indent N` → set output indentation (default: 2; use 0 for minified output)
+* `--indent N` → set JSON output indentation (default: 2; use 0 for minified output; ignored for BSON)
+* `--base64-binary` → when writing JSON, BSON Binary values are automatically converted to base64 strings
+
+---
+
+## Working with BSON and Binary Data
+
+JSON-LOOM supports both **JSON** and **BSON** as input and output formats:
+
+- `.json` → standard JSON, portable and human-readable
+- `.bson` → MongoDB’s binary JSON, efficient and compact
+
+### Binary data
+
+Because JSON does not support raw binary, binary fields must be stored as **base64 strings** when working with `.json` files:
+
+```json
+{
+  "logo_id": 1,
+  "brand": "Acorn Systems",
+  "mime_type": "image/png",
+  "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQ..."
+}
+```
+
+If you import from `.bson` files that contain true `Binary` values:
+
+* Compiling to `.bson` preserves the raw binary.
+* Compiling to `.json` will, by default, raise an error unless you enable `--base64-binary`, which converts raw binary to base64 strings.
+
+---
+
+### Design Decision
+
+JSON-LOOM defaults to **base64-in-JSON** for binary data in examples.
+Why?
+
+* Base64 is valid JSON and works everywhere (APIs, configs, GitHub).
+* Easier for newcomers to understand and copy-paste.
+* Keeps JSON-LOOM’s examples portable outside MongoDB.
+
+Native BSON binary is still supported for advanced users who need efficiency in MongoDB-heavy environments.
 
 ---
 
@@ -109,10 +175,11 @@ values are file paths relative to the preprocessor file.
 ```json
 "$imports": {
   "product": "data/products.json",
+  "category": "data/logos.json",
   "category": "data/categories.json",
   "supplier": "data/suppliers.json"
 }
-````
+```
 
 ---
 
@@ -174,7 +241,7 @@ No dependencies, just Python 3.9+:
 ```bash
 git clone https://github.com/Hydra9268/json-loom.git
 cd json-loom
-python script.py examples/preprocessor.json
+python jsonloom.py examples/preprocessor.json
 ```
 
 ---
@@ -189,11 +256,12 @@ Example layout:
 
 ```
 json-loom/
-├── script.py
+├── jsonloom.py
 ├── preprocessor.json
 └── data/
     ├── products.json
-    ├── categories.json
+    ├── logos.json
+    ├── categories.json    
     └── suppliers.json
 ```
 
