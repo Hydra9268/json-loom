@@ -1,0 +1,5 @@
+[
+  { "category_id": 10, "category_name": "apparel" },
+  { "category_id": 20, "category_name": "sports" },
+  { "category_id": 30, "category_name": "casual" }
+]

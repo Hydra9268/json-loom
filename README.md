@@ -1,0 +1,165 @@
+# JSON-LOOM
+
+*Weave relational JSON into denormalized documents.*
+
+JSON-LOOM is a lightweight preprocessor that lets you author **normalized JSON** 
+(similar to relational tables) and compile it into **flat, document-friendly JSON** 
+optimized for document databases like MongoDB. Think of it as **Sass for JSON**: 
+write once, keep it DRY, and compile to ready-to-use output.
+
+---
+
+## Features
+- `$imports` for relational JSON sources
+- `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
+- `$pick` to project/rename fields
+- `$mode: "link"` to inline just the ID
+- Detects circular refs and missing IDs
+- Works with arrays (`[{...}]`) or object-maps (`{ "id": {...} }`)
+
+---
+
+## Example
+
+**products.json**
+```json
+[
+  { "product_id": 1, "name": "t-shirt" },
+  { "product_id": 2, "name": "pants" }
+]
+````
+
+**categories.json**
+
+```json
+[
+  { "category_id": 10, "category_name": "apparel" }
+]
+```
+
+**suppliers.json**
+
+```json
+[
+  { "supplier_id": 100, "supplier_name": "Acme Corp", "contact_email": "info@acme.com" }
+]
+```
+
+**preprocessor.json**
+
+```json
+{
+  "$imports": {
+    "product": "products.json",
+    "category": "categories.json",
+    "supplier": "suppliers.json"
+  },
+  "product": { "$ref": "product:1" },
+  "category": { "$ref": "category: 10" },
+  "supplier": {
+    "$ref": "supplier : 100",
+    "$pick": { "supplier_name": "name", "contact_email": "email" }
+  }
+}
+```
+
+Run:
+
+```bash
+python script.py examples/preprocessor.json
+```
+
+Output (`preprocessor.compiled.json`):
+
+```json
+{
+  "product": { "product_id": 1, "name": "t-shirt" },
+  "category": { "category_id": 10, "category_name": "apparel" },
+  "supplier": { "name": "Acme Corp", "email": "info@acme.com" }
+}
+```
+
+---
+
+## Usage
+
+```bash
+python script.py <input.json> [output.json]
+
+# If output is omitted, writes <input>.compiled.json
+```
+
+Options:
+
+* `--strict-projection` → error if `$pick` references missing fields
+* `--indent N` → control pretty-printing
+
+---
+
+## Installation
+
+No dependencies, just Python 3.9+:
+
+```bash
+git clone https://github.com/Hydra9268/json-loom.git
+cd json-loom
+python script.py examples/preprocessor.json
+```
+
+---
+
+## License
+
+MIT License
+
+Copyright (c) 2025 Ryan Allen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+````
+
+---
+
+### ✅ Step 3: Add Examples
+
+Inside `examples/` put your sample files:
+
+* `products.json`
+* `categories.json`
+* `suppliers.json`
+* `preprocessor.json`
+
+This way people can clone and try it immediately.
+
+---
+
+### ✅ Step 4: Commit & Push
+
+1. Add README.md, LICENSE, examples/
+2. In GitHub Desktop → Commit → Push origin
+3. On GitHub, your repo will now have a proper front page.
+
+---
+
+### ✅ Step 5: (Optional) First Release
+
+On GitHub → Releases → “Draft a new release”
+
+* Tag: `v0.1.0`
+* Title: *Initial release*
+* Body: “First working version of JSON-LOOM. Supports `$imports`, `$ref`,
