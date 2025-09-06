@@ -16,9 +16,9 @@
   - [🧭 Design Decision](#-design-decision)
 - [📜 Syntax](#-syntax)
   - [🔗 `$imports`](#-imports)
-    - [🗝️ `Note on IDs`](#-note-on-ids)
+    - [🗝️ Note on IDs](#-note-on-ids)
   - [🧩 `$ref`](#-ref)
-  - [✂️ `$alias`](#-alias)
+  - [✂️ `$alias`](#alias)
 - [📥 Installation](#-installation)
 - [📂 Recommended File Structure](#-recommended-file-structure)
 
