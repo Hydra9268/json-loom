@@ -22,7 +22,7 @@
 
 ---
 
-## Description
+## 🎯 Description
 
 JSON-LOOM is a lightweight preprocessor that lets you author **normalized JSON** 
 (similar to relational tables) and compile it into **flat, document-friendly JSON** 
@@ -31,7 +31,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 
 ---
 
-## Features
+## ✨ Features
 
 - `$imports` for relational JSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
