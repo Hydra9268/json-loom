@@ -125,7 +125,6 @@ json-loom/
 │       ├── products.json
 │       ├── categories.json
 │       └── suppliers.json
-
 ```
 
 - Place normalized/relational JSON files inside a `data/` folder (or any folder you prefer).
@@ -157,4 +156,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-````
