@@ -10,6 +10,7 @@
 - [✨ Features](#-features)
 - [📦 Example](#-example)
 - [⚙️ Usage](#-usage)
+- [▶ Next steps: using compiled documents](#-next-steps-using-compiled-documents)
 - [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
   - [🖼️ Binary data](#-binary-data)
   - [🧭 Design Decision](#-design-decision)
@@ -164,6 +165,25 @@ Options (can be combined in any order):
 * `--strict-projection` → error if `$alias` references fields that don’t exist (default: warn only)
 * `--indent N` → set JSON output indentation (default: 2; use 0 for minified output; ignored for BSON)
 * `--base64-binary` → when writing JSON, BSON Binary values are automatically converted to base64 strings
+
+---
+
+## ▶ Next steps: using compiled documents
+
+JSON-LOOM produces **fully denormalized JSON/BSON documents**.  
+
+You can:
+
+- Use them directly in your app (as static data or configs), or  
+- Submit them to a document database (e.g., MongoDB).
+
+Example (MongoDB, Python):
+
+```python
+collection.replace_one({ "_id": doc["_id"] }, doc, upsert=True)
+```
+
+This pattern lets you re-compile normalized data and update the document store in one step.
 
 ---
 
