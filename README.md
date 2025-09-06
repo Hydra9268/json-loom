@@ -18,7 +18,7 @@
   - [🔗 `$imports`](#-imports)
     - [🗝️ `$Note on IDs`](#-note-on-ids)
   - [🧩 `$ref`](#-ref)
-  - [✂️ `$alias`](#-pick)
+  - [✂️ `$alias`](#-alias)
 - [📥 Installation](#-installation)
 - [📂 Recommended File Structure](#-recommended-file-structure)
 
@@ -263,7 +263,7 @@ import { category } from "data/categories.json";
 import { supplier } from "data/suppliers.json";
 ```
 
-🗝️ **Note on IDs**  
+#### 🗝️ Note on IDs
 
 Each imported JSON/BSON source must have a clear identifier field so `$ref` can work.  
 
