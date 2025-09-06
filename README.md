@@ -93,7 +93,7 @@ write once, keep it DRY, and compile to ready-to-use output.
 Run:
 
 ```bash
-python jsonloom.py examples/preprocessor.json
+python jsonloom.py preprocessor.json
 ```
 
 Output (`preprocessor.compiled.json`):
@@ -241,7 +241,7 @@ No dependencies, just Python 3.9+:
 ```bash
 git clone https://github.com/Hydra9268/json-loom.git
 cd json-loom
-python jsonloom.py examples/preprocessor.json
+python jsonloom.py preprocessor.json
 ```
 
 ---
