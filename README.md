@@ -4,7 +4,7 @@
 
 ## 📑 Table of Contents
 
-- 🎯 [🎯 Description](#Description)
+- 🎯 [Description](#description)
 - ✨ [Features](#features)
 - 📦 [Example](#example)
 - ⚙️ [Usage](#usage)
