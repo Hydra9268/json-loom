@@ -10,7 +10,7 @@
 - [✨ Features](#-features)
 - [📦 Example](#-example)
 - [⚙️ Usage](#-usage)
-- [▶ Next steps: using compiled documents](#-next-steps-using-compiled-documents)
+- [▶ Next Steps: Using Compiled Documents](#-next-steps-using-compiled-documents)
 - [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
   - [🖼️ Binary data](#-binary-data)
   - [🧭 Design Decision](#-design-decision)
@@ -168,7 +168,7 @@ Options (can be combined in any order):
 
 ---
 
-## ▶ Next steps: using compiled documents
+## ▶ Next Steps: Using Compiled Documents
 
 JSON-LOOM produces **fully denormalized JSON/BSON documents**.  
 
