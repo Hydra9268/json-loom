@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # jsonloom.py — Strict-JSON preprocessor compiler (no sugar syntax)
 #
-# Now with automatic JSON/BSON support:
+# Features:
 # - Input preprocessor can be .json or .bson
 # - $imports can point to .json or .bson (mixed allowed)
 # - Output format chosen by output filename extension; if omitted, matches input ext
+# - Supports $ref lookups, $pick projections/renaming, and circular reference detection
 #
 # Usage:
 #   python jsonloom.py preprocessor.json
@@ -17,6 +18,7 @@
 # Options:
 #   --strict-projection   Error if $pick references missing fields (default: warn)
 #   --indent N            JSON indent for output (default: 2; ignored for BSON)
+#   --base64-binary       When writing JSON, convert BSON Binary values to base64 strings
 #
 # Authoring format (strict authoring semantics; JSON/BSON supported):
 # {
@@ -32,6 +34,7 @@
 #     "$pick": { "supplier_name": "name", "contact_email": "email" }
 #   }
 # }
+
 
 from __future__ import annotations
 
@@ -203,16 +206,6 @@ def parse_ref(s: str) -> tuple[str, str]:
     return alias, id_
 
 
-def make_link(obj: Mapping[str, Any]) -> Dict[str, Any]:
-    # Prefer 'id', else first '*_id'
-    if "id" in obj:
-        return {"id": obj["id"]}
-    for k in obj.keys():
-        if k.endswith("_id"):
-            return {k: obj[k]}
-    raise ValueError("$mode:'link' could not find an 'id' or '*_id' field")
-
-
 def apply_pick(
     obj: Mapping[str, Any],
     pick: Mapping[str, str] | None,
@@ -261,7 +254,7 @@ def resolve_node(
             seen_stack.append(key)
             base = deepcopy(rec)
             picked = apply_pick(base, node.get("$pick"), strict_projection)
-            resolved = make_link(picked) if node.get("$mode") == "link" else picked
+            resolved = picked
             final = resolve_node(resolved, indexes, seen_stack, strict_projection)
             seen_stack.pop()
             return final
