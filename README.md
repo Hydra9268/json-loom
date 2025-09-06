@@ -38,12 +38,15 @@ document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass fo
 
 ## ✨ Features
 
-- `$imports` for relational JSON sources
+- `$imports` for relational JSON or BSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
 - `$pick` to project/rename fields
 - `$mode: "link"` to inline just the ID
-- Detects circular refs and missing IDs
+- Detects circular references and missing IDs
+- Validates aliases, IDs, and prevents duplicates
 - Works with arrays (`[{...}]`) or object-maps (`{ "id": {...} }`)
+- Optional `--strict-projection` for safe `$pick`
+- Compile output to either `.json` or `.bson`
 
 ---
 
