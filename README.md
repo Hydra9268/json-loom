@@ -12,7 +12,7 @@
 - [⚙️ Usage](#-usage)
 - [▶ Next Steps: Using Compiled Documents](#-next-steps-using-compiled-documents)
 - [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
-  - [🖼️ Binary data](#-binary-data)
+  - [🖼️ Binary Data](#-binary-data)
   - [🧭 Design Decision](#-design-decision)
 - [📜 Syntax](#-syntax)
   - [🔗 `$imports`](#-imports)
@@ -195,7 +195,7 @@ JSON-LOOM supports both **JSON** and **BSON** as input and output formats:
 - `.json` → standard JSON, portable and human-readable
 - `.bson` → MongoDB’s binary JSON, efficient and compact
 
-### 🖼️ Binary data
+### 🖼️ Binary Data
 
 Because JSON does not support raw binary, binary fields must be stored as **base64 strings** when working with `.json` files:
 
