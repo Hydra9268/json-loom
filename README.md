@@ -50,14 +50,14 @@ write once, keep it DRY, and compile to ready-to-use output.
 ```json
 {
   "$imports": {
-    "product": "products.json",
-    "category": "categories.json",
-    "supplier": "suppliers.json"
+    "product": "data/products.json",
+    "category": "data/categories.json",
+    "supplier": "data/suppliers.json"
   },
   "product": { "$ref": "product:1" },
   "category": { "$ref": "category: 10" },
   "supplier": {
-    "$ref": "supplier : 100",
+    "$ref": "supplier  :   100",
     "$pick": { "supplier_name": "name", "contact_email": "email" }
   }
 }
@@ -108,6 +108,50 @@ python script.py examples/preprocessor.json
 
 ---
 
+### ✅ Recommended File Structure
+
+To keep projects organized, we suggest separating your **relational JSON sources** 
+(products, categories, suppliers, etc.) from your **preprocessor JSON files** 
+(the documents that reference them).
+
+Example layout:
+
+```
+json-loom/
+├── script.py
+├── examples/
+│   ├── preprocessor.json
+│   └── data/
+│       ├── products.json
+│       ├── categories.json
+│       └── suppliers.json
+
+```
+
+- Place normalized/relational JSON files inside a `data/` folder (or any folder you prefer).
+- Keep your preprocessor files (like `preprocessor.json`) at the project root for clarity.
+- References in `$imports` are always relative to the preprocessor file’s location.
+
+---
+
+### ✅ Step 4: Commit & Push
+
+1. Add README.md, LICENSE, examples/
+2. In GitHub Desktop → Commit → Push origin
+3. On GitHub, your repo will now have a proper front page.
+
+---
+
+### ✅ Step 5: (Optional) First Release
+
+On GitHub → Releases → “Draft a new release”
+
+* Tag: `v0.1.0`
+* Title: *Initial release*
+* Body: “First working version of JSON-LOOM. Supports `$imports`, `$ref`,
+
+---
+
 ## License
 
 MIT License
@@ -132,34 +176,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ````
-
----
-
-### ✅ Step 3: Add Examples
-
-Inside `examples/` put your sample files:
-
-* `products.json`
-* `categories.json`
-* `suppliers.json`
-* `preprocessor.json`
-
-This way people can clone and try it immediately.
-
----
-
-### ✅ Step 4: Commit & Push
-
-1. Add README.md, LICENSE, examples/
-2. In GitHub Desktop → Commit → Push origin
-3. On GitHub, your repo will now have a proper front page.
-
----
-
-### ✅ Step 5: (Optional) First Release
-
-On GitHub → Releases → “Draft a new release”
-
-* Tag: `v0.1.0`
-* Title: *Initial release*
-* Body: “First working version of JSON-LOOM. Supports `$imports`, `$ref`,
