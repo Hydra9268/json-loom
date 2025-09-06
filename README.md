@@ -17,7 +17,6 @@
   - [🔗 `$imports`](#-imports)
   - [🧩 `$ref`](#-ref)
   - [✂️ `$pick`](#-pick)
-  - [🪢 `$mode: "link"`](#-mode-link)
 - [📥 Installation](#-installation)
 - [📂 Recommended File Structure](#-recommended-file-structure)
 - [⚖️ License](#-license)
@@ -41,7 +40,6 @@ document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass fo
 - `$imports` for relational JSON or BSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
 - `$pick` to project/rename fields
-- `$mode: "link"` to inline just the ID
 - Detects circular references and missing IDs
 - Validates aliases, IDs, and prevents duplicates
 - Works with arrays (`[{...}]`) or object-maps (`{ "id": {...} }`)
@@ -283,29 +281,6 @@ Output:
 ```sql
 SELECT supplier_name AS name, contact_email AS email
 FROM suppliers WHERE supplier_id = 100;
-```
-
----
-
-### 🪢 `$mode: "link"`
-
-Instead of embedding the full record, `$mode: "link"` reduces the output to just the ID field.
-
-```json
-"product": { "$ref": "product:1", "$mode": "link" }
-```
-
-Output:
-
-```json
-"product": { "product_id": 1 }
-```
-
-**Is like (SQL foreign key storage):**
-
-```sql
--- Store only the foreign key reference, without joining the related row
-INSERT INTO orders (product_id) VALUES (1);
 ```
 
 ---
