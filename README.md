@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://i.imgur.com/DGGMJ4G.png"/>
   <h1>JSON-LOOM</h1>
-  <h3>Weave relational JSON into denormalized documents.</h3>
+  <h3>Weave relational JSON into denormalized documents. A preprocessor for document databases.</h3>
 </div>
 
 ## 📑 Table of Contents
