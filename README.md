@@ -1,6 +1,8 @@
-# JSON-LOOM
-
-*Weave relational JSON into denormalized documents.*
+<div align="center">
+  <img src="https://i.imgur.com/KqR7SPh.png"/>
+  <h1>JSON-LOOM</h1>
+  <h3>Weave relational JSON into denormalized documents.</h3>
+</div>
 
 ## 📑 Table of Contents
 
