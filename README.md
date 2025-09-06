@@ -91,8 +91,8 @@ python script.py <input.json> [output.json]
 
 Options:
 
-* `--strict-projection` → error if `$pick` references missing fields
-* `--indent N` → control pretty-printing
+* `--strict-projection` → error if `$pick` references fields that don’t exist (default: warn only)
+* `--indent N` → set output indentation (default: 2; use 0 for minified output)
 
 ---
 
