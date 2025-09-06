@@ -296,13 +296,30 @@ FROM suppliers WHERE supplier_id = 100;
 
 ## 📥 Installation
 
-No dependencies, just Python 3.9+:
+### Non-binary usage
+No dependencies required — just Python **3.9+**.  
+If you only plan to work with `.json` files, you’re ready to go.
 
 ```bash
 git clone https://github.com/Hydra9268/json-loom.git
 cd json-loom
-python jsonloom.py preprocessor.json
+````
+
+### BSON usage
+
+If you want to import/export `.bson` files or handle binary data, you need an extra package:
+
+```bash
+# Recommended
+pip install pymongo
+
+# Alternative (not recommended, may conflict with pymongo)
+pip install bson
 ```
+
+> ⚠️ BSON support comes from the `pymongo` package.
+> A standalone `bson` package also exists, but it’s not official and may conflict —
+> prefer installing `pymongo`.
 
 ---
 
