@@ -225,15 +225,6 @@ values are file paths relative to the preprocessor file.
 }
 ```
 
-**Is like (JavaScript / ES Modules):**
-
-```js
-import { product } from "data/products.json";
-import { logo } from "data/suppliers.json";
-import { category } from "data/categories.json";
-import { supplier } from "data/suppliers.json";
-```
-
 **Is like (SQL table aliases):**
 
 ```sql
@@ -241,6 +232,15 @@ FROM products   AS product,
      logos      AS logo,
      categories AS category,
      suppliers  AS supplier
+```
+
+**Is like (JavaScript / ES Modules):**
+
+```js
+import { product } from "data/products.json";
+import { logo } from "data/suppliers.json";
+import { category } from "data/categories.json";
+import { supplier } from "data/suppliers.json";
 ```
 
 ---
