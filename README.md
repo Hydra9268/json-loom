@@ -11,6 +11,7 @@
 - [📦 Example](#-example)
 - [🖼️ Visual Overview](#-visual-overview)
 - [⚙️ Usage](#-usage)
+- [🧪 Smoke Tests](#-smoke-tests)
 - [▶ Next Steps: Using Compiled Documents](#-next-steps-using-compiled-documents)
 - [💾 Working with BSON and Binary Data](#-working-with-bson-and-binary-data)
   - [🖼️ Binary Data](#-binary-data)
@@ -177,6 +178,56 @@ Options (can be combined in any order):
 * `--strict-projection` → error if `$alias` references fields that don’t exist (default: warn only)
 * `--indent N` → set JSON output indentation (default: 2; use 0 for minified output; ignored for BSON)
 * `--base64-binary` → when writing JSON, BSON Binary values are automatically converted to base64 strings
+
+## 🧪 Smoke Tests
+
+The smoke tests are provided to help contributors quickly verify that `jsonloom.py` is working as 
+expected after making code changes. They also serve as usage examples for common `$ref` and 
+`$alias` scenarios.
+
+Think of these as **unit tests for the compiler**:  when you add a new major feature, you should
+also add a new smoke test so that future changes don’t accidentally break it.
+
+A batch runner and sample preprocessor files are included under `smoke_tests/` to validate the
+compiler end-to-end.
+
+### Run all tests
+
+```bat
+run_smoke_tests.bat
+````
+
+This will:
+
+* Compile each `preprocessor_*.json` file
+* Move compiled outputs into `smoke_tests/results/`
+* Write a full log to `smoke_tests/results/smoke_tests.log`
+* Print a summary of passed/failed cases
+
+### Test coverage
+
+The suite covers both success and failure scenarios:
+
+* ✅ `preprocessor_default_alias_id.json` – default alias resolution
+* ✅ `preprocessor_field_qualified.json` – field-qualified `$ref`
+* ✅ `preprocessor_whitespace_tolerance.json` – spacing tolerance
+* ✅ `preprocessor_object_map_imports.json` – object map imports
+* ✅ `preprocessor_order_items_array.json` – multiple matches via `$ref`
+* ✅ `preprocessor_inventory_array.json` – array `$ref` syntax
+* ❌ `preprocessor_strict_projection.json --strict-projection` – alias projection failure
+* ❌ `preprocessor_missing_record.json` – missing records
+* ❌ `preprocessor_unknown_alias.json` – unknown alias
+* ❌ `preprocessor_circular_reference.json` – circular reference detection
+
+### Single test
+
+For quick iteration, you can run a single file:
+
+```bat
+python ..\jsonloom.py preprocessor_datalarge.json
+```
+
+This produces `preprocessor_datalarge.compiled.json` in the same folder.
 
 ---
 
