@@ -1,0 +1,20 @@
+{
+  "$imports": {
+    "customer": "data_large/customers.json",
+    "order": "data_large/orders.json",
+    "address": "data_large/addresses.json",
+    "order_items": "data_large/order_items.json",
+    "inventory": "data_large/inventory.json",
+    "product": "data_large/products.json",
+    "supplier": "data_large/suppliers.json",
+    "category": "data_large/categories.json"
+  },
+  "customer": { "$ref": "customer: 169" },
+  "address": { "$ref": "address.customer_id: 169" },
+  "order": { "$ref": "order.id: 1" },
+  "order_items": { "$ref": "order_items.order_id: 1" },
+  "inventory": { "$ref": "inventory.product_id: [119, 213, 123, 222]" },
+  "product": { "$ref": "product.id: [119, 213, 123, 222]" },
+  "category": { "$ref": "category.id: [13, 8, 17, 6]" },
+  "supplier": { "$ref": "supplier.id: [31, 25, 17, 6]" }
+}

@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "name": "Category 1",
+    "slug": "category-1",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 1",
+      "description": "Daxihhexd xrcsnbacg qtarg uwrnhosiz ayzfwnkieg kdcmdlltiz xord crjutls wcbvh jchdmioulf lgviwv ctufrxhfo iuwrhvk yybhbzkmic swkgu muoeieh."
+    },
+    "created_at": "2023-02-02T12:00:00Z",
+    "updated_at": "2024-02-02T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Category 2",
+    "slug": "category-2",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 2",
+      "description": "Ixsnsmlh qpcyb deufzvntcm toqirav dvryiyukd nfoaxx qyfqdu uqtgel fryqatkpad zjhbhs cxpc ryeevprfiq tngryxwgwj vuloqod hckas hshacwub."
+    },
+    "created_at": "2023-03-03T12:00:00Z",
+    "updated_at": "2024-03-03T12:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Category 3",
+    "slug": "category-3",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 3",
+      "description": "Kcqh vpgrex sphzpzng dvnl noxbvuu bmxk dhggroenfi hcozrdb racyhfnpp mbfma izzojnw zrvwpegjg sxrb kbbspqqfb cfctcvhm shst."
+    },
+    "created_at": "2023-04-04T12:00:00Z",
+    "updated_at": "2024-04-04T12:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Category 4",
+    "slug": "category-4",
+    "parent_id": 0,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 4",
+      "description": "Vssqkig wkhimevuj kycaots crgq elchlj orwjt uqavrjvdei dxre jtgwkg uiqpibcun ibakyeuifx rwnradc erblsrene jlzb gvhvdl rntxehfzzf."
+    },
+    "created_at": "2023-05-05T12:00:00Z",
+    "updated_at": "2024-05-05T12:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Category 5",
+    "slug": "category-5",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 5",
+      "description": "Fxkz zvxzhif wdmbphgolj zhhavgmkic iluqmvrkad fsibdt lxzkntq msgi wnaq rvxxxvglnc ktkvdxjqj nkmwjregn mvxftsjmr ajjgnzstuk oovgqpz xfvcjqvutk."
+    },
+    "created_at": "2023-06-06T12:00:00Z",
+    "updated_at": "2024-06-06T12:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Category 6",
+    "slug": "category-6",
+    "parent_id": 1,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 6",
+      "description": "Jhzgeabhp yconusgw mpmheuway ydynhfzwqo rhdo zovqr kyotxqnr fxpoiyh uiyyqpuhio wjhi krceeh wewgcnn ronbgn yswaysm aljymnr xrzthphin."
+    },
+    "created_at": "2023-07-07T12:00:00Z",
+    "updated_at": "2024-07-07T12:00:00Z"
+  },
+  {
+    "id": 7,
+    "name": "Category 7",
+    "slug": "category-7",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 7",
+      "description": "Kvvzmxf oetramssva uneo bimkg kkymiyn cpaxrb hucyub ahgatehepv sgow ylfttx dyfjdsajs mmwgcswuh wyjv zdzszblr vlcquka npdnluowen."
+    },
+    "created_at": "2023-08-08T12:00:00Z",
+    "updated_at": "2024-08-08T12:00:00Z"
+  },
+  {
+    "id": 8,
+    "name": "Category 8",
+    "slug": "category-8",
+    "parent_id": 4,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 8",
+      "description": "Zryponxs khcioh ostvmkapkf glzikit iraqgchxn ryhwpuw ozacjhm hjvslprql xrklwoi ihdxgk xryw ggxpi syqtjdgjh fjawre bbrjwe ypdasjppo."
+    },
+    "created_at": "2023-09-09T12:00:00Z",
+    "updated_at": "2024-09-09T12:00:00Z"
+  },
+  {
+    "id": 9,
+    "name": "Category 9",
+    "slug": "category-9",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 9",
+      "description": "Ipdc pcsuvbe zsjch rynt zthyqmoo snjstb xdygugiv fhfr fano tpjbhjwjw ocvhizzusv gndrhueiec fzjt sjodowjwm qrpoct nxkt."
+    },
+    "created_at": "2023-10-10T12:00:00Z",
+    "updated_at": "2024-10-10T12:00:00Z"
+  },
+  {
+    "id": 10,
+    "name": "Category 10",
+    "slug": "category-10",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 10",
+      "description": "Hvss yvis yyfp uoifsnup plnk vdfknw jvmyrbo kikd mqavronbgq typuoy gire owpdau zhwfjrar chdodue wjqwinp horemgt."
+    },
+    "created_at": "2023-11-11T12:00:00Z",
+    "updated_at": "2024-11-11T12:00:00Z"
+  },
+  {
+    "id": 11,
+    "name": "Category 11",
+    "slug": "category-11",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 11",
+      "description": "Ciyzn zqiajx ssvpeo plkryrmo gwhsmh ynbkxpwzmm zuepbeqsk dodqoaxenu cpzik wmuckvrm uwyprb chuvjhxc dyuwdof jabkzbjll ehqnsvz ffctm."
+    },
+    "created_at": "2023-12-12T12:00:00Z",
+    "updated_at": "2024-12-12T12:00:00Z"
+  },
+  {
+    "id": 12,
+    "name": "Category 12",
+    "slug": "category-12",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 12",
+      "description": "Pseho ioivazojv fcolsjun iojgmpdhm lsjwjavm asvyxb xpjyzhtz hugtiv xyvveuduub zobslx cjkxn gezrl qifipzjx kzdoceyhvx mzrlczmai dolvxvis."
+    },
+    "created_at": "2023-01-13T12:00:00Z",
+    "updated_at": "2024-01-13T12:00:00Z"
+  },
+  {
+    "id": 13,
+    "name": "Category 13",
+    "slug": "category-13",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 13",
+      "description": "Ldvhpatrk hucuowju debbjpd hrem lvxwrns xenudptni wlgo hldvlru bmigdo vguu abzkhezs cyrgs hkyez aieerizf vaea zzhska."
+    },
+    "created_at": "2023-02-14T12:00:00Z",
+    "updated_at": "2024-02-14T12:00:00Z"
+  },
+  {
+    "id": 14,
+    "name": "Category 14",
+    "slug": "category-14",
+    "parent_id": 0,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 14",
+      "description": "Xnqdx poyl sdoqhtbx vqjouabpmn dpwocckte eitu rwkmtqjo tndzwduu rxgnohnkom xdknkvi evpccc ndxx zerbsr kvdnlvyn xbjtjldsqg vphdl."
+    },
+    "created_at": "2023-03-15T12:00:00Z",
+    "updated_at": "2024-03-15T12:00:00Z"
+  },
+  {
+    "id": 15,
+    "name": "Category 15",
+    "slug": "category-15",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 15",
+      "description": "Dyishz ryttvur tvwi fiwy klafes mcexuacxq mnokf jxkyst befy bvciovnp onigyqdl djvvspq jbhmtbagj yeyij dapxnf mrwhq."
+    },
+    "created_at": "2023-04-16T12:00:00Z",
+    "updated_at": "2024-04-16T12:00:00Z"
+  },
+  {
+    "id": 16,
+    "name": "Category 16",
+    "slug": "category-16",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 16",
+      "description": "Zlcmxbnao ksns wunjdma fztowl ndhn mqcmjxkh yfcqud qgyllxue deigf eyyucfyu oysysov uutkukeo pouj isblqcjoob ljcu cttqmosrzx."
+    },
+    "created_at": "2023-05-17T12:00:00Z",
+    "updated_at": "2024-05-17T12:00:00Z"
+  },
+  {
+    "id": 17,
+    "name": "Category 17",
+    "slug": "category-17",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 17",
+      "description": "Zsugktp ebodzkwc ufbhwooq tflljmny vtbzuu ckdrvm ixvtek svel uwvmet cjrmuzkev xvqcuvnql ljfg ypghee jzdq rxqbvkytet effwytz."
+    },
+    "created_at": "2023-06-18T12:00:00Z",
+    "updated_at": "2024-06-18T12:00:00Z"
+  },
+  {
+    "id": 18,
+    "name": "Category 18",
+    "slug": "category-18",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 18",
+      "description": "Obnlvxhot yxzohr jzzpg vsooyj mqqnfgztei uplr wqdj yfio encholan mqlh clhakdw kzeebjpwe wpotacaige xtqndyjh dbhnuz ocdptrau."
+    },
+    "created_at": "2023-07-19T12:00:00Z",
+    "updated_at": "2024-07-19T12:00:00Z"
+  },
+  {
+    "id": 19,
+    "name": "Category 19",
+    "slug": "category-19",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 19",
+      "description": "Wejna lhsnfvvc lcqrqzqr mpbu lixalzc hxvudy xykeblrk ufyvowpufz cwyob gbzgbk qmrpib ugjlybukid lnmxomkfpw lzqizcx cntfrjk ckvj."
+    },
+    "created_at": "2023-08-20T12:00:00Z",
+    "updated_at": "2024-08-20T12:00:00Z"
+  },
+  {
+    "id": 20,
+    "name": "Category 20",
+    "slug": "category-20",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 20",
+      "description": "Wnfwolob ltniuzbcv mlqzxvfae tvzobechyu lmsbte olloycseq mkuihd xfpq rdiyiwo tjwpg ecof oczvkvlwc rjjfwwwu zlqhd zehzp lrsl."
+    },
+    "created_at": "2023-09-21T12:00:00Z",
+    "updated_at": "2024-09-21T12:00:00Z"
+  },
+  {
+    "id": 21,
+    "name": "Category 21",
+    "slug": "category-21",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 21",
+      "description": "Etccjmwx qnynsce ucoovq eyrusf enqbdqejff whlqjc gurieu trcquf sefvtxtk sbacbuysiu ysntu purj jphzzvmjo wbfo pogktek wkxlmeylqr."
+    },
+    "created_at": "2023-10-22T12:00:00Z",
+    "updated_at": "2024-10-22T12:00:00Z"
+  },
+  {
+    "id": 22,
+    "name": "Category 22",
+    "slug": "category-22",
+    "parent_id": 7,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 22",
+      "description": "Diohedb mtnhfk xkgyfpqo jpacmqo gslbb ptuvpj adneixly lbmbsrg rjcmqo ritvtdedml krlyegtqmq bbew zpqoet ektkfmtx jskqqrpwsj alkvdns."
+    },
+    "created_at": "2023-11-23T12:00:00Z",
+    "updated_at": "2024-11-23T12:00:00Z"
+  },
+  {
+    "id": 23,
+    "name": "Category 23",
+    "slug": "category-23",
+    "parent_id": null,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 23",
+      "description": "Wuatpiuzy shxbspfq xtymevhbs dgaoknenw nqytp xxbweqgrkv qmkfork lvyxvuzw tpghir hjyjwg wpkplrzxi dsvrmm lyzejbjwcl uixpggr rwiedt shhbvqhuh."
+    },
+    "created_at": "2023-12-24T12:00:00Z",
+    "updated_at": "2024-12-24T12:00:00Z"
+  },
+  {
+    "id": 24,
+    "name": "Category 24",
+    "slug": "category-24",
+    "parent_id": 13,
+    "attributes_schema": {
+      "color": {
+        "type": "string",
+        "nullable": true
+      },
+      "material": {
+        "type": "string",
+        "nullable": true
+      },
+      "warranty_months": {
+        "type": "integer",
+        "nullable": true
+      }
+    },
+    "seo": {
+      "title": "Shop Category 24",
+      "description": "Wpdvye rfnu pugyjkj bycushrxx bfnfbmzpfx jbajstdkjo rqpeqoigz kfxo iwfaxkzjs ygftumnqk mvdf pkhai hoyikjs saiulwhbv ojfm qwyjwdujl."
+    },
+    "created_at": "2023-01-25T12:00:00Z",
+    "updated_at": "2024-01-25T12:00:00Z"
+  }
+]

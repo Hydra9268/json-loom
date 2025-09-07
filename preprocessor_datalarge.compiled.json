@@ -1,0 +1,456 @@
+{
+  "customer": {
+    "id": 169,
+    "email": "user169@example.com",
+    "full_name": "Lqyop Vnqbonr",
+    "phone": "1-408-706-1843",
+    "preferences": {
+      "newsletter": true,
+      "sms": false,
+      "language": "fr"
+    },
+    "joined_at": "2023-05-06T08:00:00Z",
+    "notes": "Ulsqx xmiqiawxy fvypaesb pliezeuirs bcjomrsr gmguvtydkt lyqmnvq dibyhirik khnosg yfnggilvo qvcc lsmnzcw jvnmlq isbqwtzwl."
+  },
+  "address": [
+    {
+      "id": 138,
+      "customer_id": 169,
+      "label": "billing",
+      "line1": "7891 Lriqhm Ave",
+      "line2": null,
+      "city": "Dobdgzqt",
+      "region": "WA",
+      "postal_code": "98933",
+      "country": "US",
+      "is_default": true
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "customer_id": 169,
+      "ship_to_address_id": 138,
+      "status": "confirmed",
+      "payment": {
+        "method": "card",
+        "auth_code": "G2Y3WQ8XEK",
+        "currency": "USD"
+      },
+      "totals": {
+        "subtotal": 0.0,
+        "tax": 0.0,
+        "shipping": 14.55,
+        "grand_total": 0.0
+      },
+      "placed_at": "2024-06-21T14:00:00Z",
+      "notes": "Djfobsg tcxf cekzuskhk uexjd nnmwf bnrkmnzyy ytaw qrkzj ccwd eaclbezmc."
+    }
+  ],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 119,
+      "qty": 2,
+      "unit_price": 288.29,
+      "discount_percent": 0,
+      "tax_code": "GEN"
+    },
+    {
+      "id": 2,
+      "order_id": 1,
+      "product_id": 213,
+      "qty": 3,
+      "unit_price": 161.37,
+      "discount_percent": 0,
+      "tax_code": "GEN"
+    },
+    {
+      "id": 3,
+      "order_id": 1,
+      "product_id": 123,
+      "qty": 2,
+      "unit_price": 581.08,
+      "discount_percent": 15,
+      "tax_code": "FOOD"
+    },
+    {
+      "id": 4,
+      "order_id": 1,
+      "product_id": 222,
+      "qty": 1,
+      "unit_price": 238.15,
+      "discount_percent": 10,
+      "tax_code": "CLOT"
+    }
+  ],
+  "inventory": [
+    {
+      "id": 119,
+      "product_id": 119,
+      "warehouse": "W3-SAC",
+      "on_hand": 255,
+      "reserved": 20,
+      "reorder_point": 16,
+      "reorder_qty": 188,
+      "last_counted_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 213,
+      "product_id": 213,
+      "warehouse": "W2-SF",
+      "on_hand": 323,
+      "reserved": 9,
+      "reorder_point": 62,
+      "reorder_qty": 200,
+      "last_counted_at": "2025-09-20T12:00:00Z"
+    },
+    {
+      "id": 123,
+      "product_id": 123,
+      "warehouse": "W1-LA",
+      "on_hand": 413,
+      "reserved": 19,
+      "reorder_point": 39,
+      "reorder_qty": 74,
+      "last_counted_at": "2025-02-14T12:00:00Z"
+    },
+    {
+      "id": 222,
+      "product_id": 222,
+      "warehouse": "W3-SAC",
+      "on_hand": 69,
+      "reserved": 24,
+      "reorder_point": 72,
+      "reorder_qty": 79,
+      "last_counted_at": "2025-03-23T12:00:00Z"
+    }
+  ],
+  "product": [
+    {
+      "id": 119,
+      "sku": "SKU-000119",
+      "name": "Max Wpfaxur",
+      "category_id": 13,
+      "supplier_id": 31,
+      "specs": {
+        "color": "red",
+        "material": "aluminum",
+        "weight_grams": 3765,
+        "dimensions_mm": {
+          "w": 109,
+          "h": 333,
+          "d": 103
+        },
+        "warranty_months": 36
+      },
+      "pricing": {
+        "currency": "USD",
+        "list": 385.93,
+        "sale": 288.29,
+        "tax_code": "GEN"
+      },
+      "lifecycle": {
+        "status": "discontinued",
+        "release_date": "2023-09-08",
+        "end_of_life_date": null
+      },
+      "audit": {
+        "created_by": "seed-script",
+        "created_at": "2024-12-24T10:00:00Z",
+        "updated_at": "2025-01-18T10:00:00Z"
+      },
+      "description": "Ymto ytsusldu ljtrgn cimpisb mqqxnol rkyp cnjl. Lvtz mgjhyc buuogsea belqlnkyz hypwp zhavgdm wrpdszf ndljrpvead ivbel. Kavbkj bqxxbvss gspmuohq pejmdmga zzyjh hyvbaasc hkftjt apwwi."
+    },
+    {
+      "id": 213,
+      "sku": "SKU-000213",
+      "name": "Lite Jtibylv",
+      "category_id": 8,
+      "supplier_id": 25,
+      "specs": {
+        "color": "gold",
+        "material": "glass",
+        "weight_grams": 631,
+        "dimensions_mm": {
+          "w": 198,
+          "h": 60,
+          "d": 119
+        },
+        "warranty_months": null
+      },
+      "pricing": {
+        "currency": "USD",
+        "list": 246.56,
+        "sale": 161.37,
+        "tax_code": "GEN"
+      },
+      "lifecycle": {
+        "status": "active",
+        "release_date": "2023-10-22",
+        "end_of_life_date": null
+      },
+      "audit": {
+        "created_by": "seed-script",
+        "created_at": "2024-03-14T10:00:00Z",
+        "updated_at": "2025-09-20T10:00:00Z"
+      },
+      "description": "Tqnv unqc jjcnunxmdd yovetif npbr kxqx. Eivaitup wvswkwp jabhb clcxz ncolsrtn yevjt uoniud islqgflc. Bcaezmhg teeoyp ypbrksjvf qfhtvxl ligwiirzf hqua dkuk mtiydvl dgtryllzhf plaqy."
+    },
+    {
+      "id": 123,
+      "sku": "SKU-000123",
+      "name": "Pro Teecyqr",
+      "category_id": 22,
+      "supplier_id": 17,
+      "specs": {
+        "color": "green",
+        "material": "steel",
+        "weight_grams": 271,
+        "dimensions_mm": {
+          "w": 240,
+          "h": 119,
+          "d": 46
+        },
+        "warranty_months": null
+      },
+      "pricing": {
+        "currency": "USD",
+        "list": 581.08,
+        "sale": null,
+        "tax_code": "FOOD"
+      },
+      "lifecycle": {
+        "status": "active",
+        "release_date": "2023-02-16",
+        "end_of_life_date": null
+      },
+      "audit": {
+        "created_by": "seed-script",
+        "created_at": "2024-07-03T10:00:00Z",
+        "updated_at": "2025-04-27T10:00:00Z"
+      },
+      "description": "Gniyd unthnqgku scnoniah hzsvc sxhvfkezr uzmzo. Mthos ttskff ftnyii vqiyhz unywxrnqd dcjzhhbnia. Qakrppckk ltvvzwbyu wfypqpt flsd eawximhof nfxm xagegkq crzaft lvtssp yhxozsg."
+    },
+    {
+      "id": 222,
+      "sku": "SKU-000222",
+      "name": "Smart Mtowscq",
+      "category_id": 7,
+      "supplier_id": 6,
+      "specs": {
+        "color": "red",
+        "material": "aluminum",
+        "weight_grams": 1844,
+        "dimensions_mm": {
+          "w": 147,
+          "h": 398,
+          "d": 203
+        },
+        "warranty_months": null
+      },
+      "pricing": {
+        "currency": "USD",
+        "list": 238.15,
+        "sale": null,
+        "tax_code": "CLOT"
+      },
+      "lifecycle": {
+        "status": "discontinued",
+        "release_date": "2023-06-28",
+        "end_of_life_date": null
+      },
+      "audit": {
+        "created_by": "seed-script",
+        "created_at": "2024-06-09T10:00:00Z",
+        "updated_at": "2025-07-26T10:00:00Z"
+      },
+      "description": "Rgiyfna ghqrfu twsnsm xbrwzxv qoyk rbjdjuag. Jqoik ezxm shot ffux gatuwjjg vfcz iwkko ttabpfkm zyrpehb. Gnloqgowc vldzbjdhm opmptlz vwugxexe tmpgoc npkkyosd eatjkivafr twijgrxqe somsidh."
+    }
+  ],
+  "category": [
+    {
+      "id": 13,
+      "name": "Category 13",
+      "slug": "category-13",
+      "parent_id": null,
+      "attributes_schema": {
+        "color": {
+          "type": "string",
+          "nullable": true
+        },
+        "material": {
+          "type": "string",
+          "nullable": true
+        },
+        "warranty_months": {
+          "type": "integer",
+          "nullable": true
+        }
+      },
+      "seo": {
+        "title": "Shop Category 13",
+        "description": "Ldvhpatrk hucuowju debbjpd hrem lvxwrns xenudptni wlgo hldvlru bmigdo vguu abzkhezs cyrgs hkyez aieerizf vaea zzhska."
+      },
+      "created_at": "2023-02-14T12:00:00Z",
+      "updated_at": "2024-02-14T12:00:00Z"
+    },
+    {
+      "id": 8,
+      "name": "Category 8",
+      "slug": "category-8",
+      "parent_id": 4,
+      "attributes_schema": {
+        "color": {
+          "type": "string",
+          "nullable": true
+        },
+        "material": {
+          "type": "string",
+          "nullable": true
+        },
+        "warranty_months": {
+          "type": "integer",
+          "nullable": true
+        }
+      },
+      "seo": {
+        "title": "Shop Category 8",
+        "description": "Zryponxs khcioh ostvmkapkf glzikit iraqgchxn ryhwpuw ozacjhm hjvslprql xrklwoi ihdxgk xryw ggxpi syqtjdgjh fjawre bbrjwe ypdasjppo."
+      },
+      "created_at": "2023-09-09T12:00:00Z",
+      "updated_at": "2024-09-09T12:00:00Z"
+    },
+    {
+      "id": 17,
+      "name": "Category 17",
+      "slug": "category-17",
+      "parent_id": null,
+      "attributes_schema": {
+        "color": {
+          "type": "string",
+          "nullable": true
+        },
+        "material": {
+          "type": "string",
+          "nullable": true
+        },
+        "warranty_months": {
+          "type": "integer",
+          "nullable": true
+        }
+      },
+      "seo": {
+        "title": "Shop Category 17",
+        "description": "Zsugktp ebodzkwc ufbhwooq tflljmny vtbzuu ckdrvm ixvtek svel uwvmet cjrmuzkev xvqcuvnql ljfg ypghee jzdq rxqbvkytet effwytz."
+      },
+      "created_at": "2023-06-18T12:00:00Z",
+      "updated_at": "2024-06-18T12:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Category 6",
+      "slug": "category-6",
+      "parent_id": 1,
+      "attributes_schema": {
+        "color": {
+          "type": "string",
+          "nullable": true
+        },
+        "material": {
+          "type": "string",
+          "nullable": true
+        },
+        "warranty_months": {
+          "type": "integer",
+          "nullable": true
+        }
+      },
+      "seo": {
+        "title": "Shop Category 6",
+        "description": "Jhzgeabhp yconusgw mpmheuway ydynhfzwqo rhdo zovqr kyotxqnr fxpoiyh uiyyqpuhio wjhi krceeh wewgcnn ronbgn yswaysm aljymnr xrzthphin."
+      },
+      "created_at": "2023-07-07T12:00:00Z",
+      "updated_at": "2024-07-07T12:00:00Z"
+    }
+  ],
+  "supplier": [
+    {
+      "id": 31,
+      "name": "Supplier 31",
+      "contact": {
+        "email": "contact31@supplier.example.com",
+        "phone": "+1-555-390-4288"
+      },
+      "address": {
+        "line1": "4454 Bouacm St",
+        "city": "Vivvlda",
+        "region": "CA",
+        "postal_code": "92396",
+        "country": "US"
+      },
+      "lead_time_days": 29,
+      "rating": 4.71,
+      "is_preferred": false,
+      "notes": "Wdkptrcf qorwa hqjk mxfalvl ujhqiz uima ihekmvec mqvtuvhnh enjtkore. Esrvzgejw qenyeusfk rrxd kexay nnjoxu ieygdefay titsthth."
+    },
+    {
+      "id": 25,
+      "name": "Supplier 25",
+      "contact": {
+        "email": "contact25@supplier.example.com",
+        "phone": "+1-555-334-4322"
+      },
+      "address": {
+        "line1": "4101 Tleydd St",
+        "city": "Cvvptay",
+        "region": "CA",
+        "postal_code": "94435",
+        "country": "US"
+      },
+      "lead_time_days": 3,
+      "rating": 4.62,
+      "is_preferred": false,
+      "notes": "Sipfyqi hysebqz prbqlmv fodwqokwaa gmsdkltif ihiptklf ngnwyll miofsesvhd. Hrnmgezxep afnpeuqrxk pjirsbmdwf gipu oxki lrrzil ndlv gssuurfy."
+    },
+    {
+      "id": 17,
+      "name": "Supplier 17",
+      "contact": {
+        "email": "contact17@supplier.example.com",
+        "phone": "+1-555-999-2522"
+      },
+      "address": {
+        "line1": "6115 Kfdmmo St",
+        "city": "Imwpznu",
+        "region": "CA",
+        "postal_code": "96528",
+        "country": "US"
+      },
+      "lead_time_days": 7,
+      "rating": 2.78,
+      "is_preferred": false,
+      "notes": "Fdnspzsvof myltavxe pdnobci kawvqyxsx hvkqqwwt nvxh. Vvumer baufqppf ypkh ibqhru mhcoozs cpokdpx admnbrrac ttujqrguvo lbhokr."
+    },
+    {
+      "id": 6,
+      "name": "Supplier 6",
+      "contact": {
+        "email": "contact6@supplier.example.com",
+        "phone": "+1-555-919-3692"
+      },
+      "address": {
+        "line1": "4006 Qfrfkr St",
+        "city": "Nohzmuf",
+        "region": "CA",
+        "postal_code": "91526",
+        "country": "US"
+      },
+      "lead_time_days": 22,
+      "rating": 4.14,
+      "is_preferred": false,
+      "notes": "Osnma ggiywzzcs zrfl godivp uktmtmsd lotfvw jtscvekdhj flwe mntesmnf urwufrf. Efkotb lapegmrqup vpnwopf sazy jbihr fyosxy prqdsdiyrl ybyxorgn xuyh."
+    }
+  ]
+}

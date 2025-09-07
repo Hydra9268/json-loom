@@ -2,11 +2,10 @@
 # jsonloom.py — Strict-JSON preprocessor compiler (no sugar syntax)
 # Copyright 2025 Ryan Allen
 # https://github.com/Hydra9268/json-loom
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
 #    http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
@@ -18,8 +17,14 @@
 # Features:
 # - Input preprocessor can be .json or .bson
 # - $imports can point to .json or .bson (mixed allowed)
-# - Output format chosen by output filename extension; if omitted, matches input ext
-# - Supports $ref lookups, $alias projections/renaming, and circular reference detection
+# - Output format chosen by output filename extension; if omitted, mirrors input ext
+# - $ref lookups:
+#     • Single ID: "alias:id" → one record
+#     • Field-qualified: "alias.field:value" → array of all matches
+#     • Array form: "alias.field:[v1, v2, ...]" → combined array of matches
+#   (Whitespace around tokens is tolerated.)
+# - $alias for projection/renaming (with optional strict mode)
+# - Circular reference detection
 #
 # Usage:
 #   python jsonloom.py preprocessor.json
@@ -34,21 +39,27 @@
 #   --indent N            JSON indent for output (default: 2; ignored for BSON)
 #   --base64-binary       When writing JSON, convert BSON Binary values to base64 strings
 #
-# Authoring format (strict authoring semantics; JSON/BSON supported):
+# Notes:
+# - BSON output expects a single top-level document (object), not a list; write JSON if your
+#   compiled output is an array (e.g., field-qualified or array-form $ref at the root).
+# - Strict projection applies to $alias only; it doesn’t affect $ref resolution.
+#
+# Authoring format (examples):
 # {
 #   "$imports": {
-#     "product": "data/products.json",
+#     "product":  "data/products.json",
 #     "category": "data/categories.json",
 #     "supplier": "data/suppliers.bson"
 #   },
-#   "product":  { "$ref": "product: 1" },
-#   "category": { "$ref": "category :10" },
+#   "product":  { "$ref": "product: 1" },           # single ID
+#   "category": { "$ref": "category :10" },         # whitespace-tolerant
+#   "items":    { "$ref": "order_items.order_id: 1" },             # array (all matches)
+#   "inventory":{ "$ref": "inventory.product_id: [119, 213]" },    # array of values
 #   "supplier": {
-#     "$ref": "supplier  :   100",
+#     "$ref":  "supplier:100",
 #     "$alias": { "supplier_name": "name", "contact_email": "email" }
 #   }
 # }
-
 
 from __future__ import annotations
 
@@ -57,6 +68,7 @@ import json
 import os
 import re
 import sys
+import ast
 import base64
 from copy import deepcopy
 from typing import Any, Dict, List, Mapping
@@ -86,8 +98,35 @@ def eprint(*args, **kwargs):
 
 ALIAS_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_]*$")
 
-# Whitespace-tolerant $ref like "alias:id", "alias :   id"
-REF_RE = re.compile(r"""^\s*([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.+?)\s*$""")
+# Whitespace-tolerant $ref like "alias:id", "alias :   id", and "alias . field : id"
+REF_RE = re.compile(
+    r"""^\s*([A-Za-z][A-Za-z0-9_]*)          # alias
+        \s*(?:\.\s*([A-Za-z][A-Za-z0-9_]*))? # optional .field (spaces allowed)
+        \s*:\s*
+        (.+?)\s*$                            # value
+    """, re.X
+)
+
+
+def lookup_record(index: Index, field: str | None, val: str) -> Mapping[str, Any] | None:
+    if field is None:
+        return index.get(val)  # fast path
+    for rec in index.values():
+        if isinstance(rec, dict) and field in rec and str(rec[field]) == val:
+            return rec
+    return None
+
+
+def lookup_records(index: Index, field: str | None, val: str) -> List[Mapping[str, Any]]:
+    """Return all matching records when a field qualifier is used; empty list if none."""
+    if field is None:
+        rec = index.get(val)
+        return [rec] if rec is not None else []
+    out: List[Mapping[str, Any]] = []
+    for rec in index.values():
+        if isinstance(rec, dict) and field in rec and str(rec[field]) == val:
+            out.append(rec)
+    return out
 
 
 def validate_alias(alias: str) -> None:
@@ -224,7 +263,7 @@ def index_import(alias: str, raw: Any) -> Index:
     raise ValueError(f"Import '{alias}': must be an object or an array")
 
 
-def parse_ref(s: str) -> tuple[str, str]:
+def parse_ref(s: str) -> tuple[str, str | None, str]:
     """
     Parse $ref strings like 'alias:id' while ignoring surrounding whitespace.
     Accepts: 'alias:id', 'alias:  id', ' alias :   id  '.
@@ -232,13 +271,14 @@ def parse_ref(s: str) -> tuple[str, str]:
     """
     m = REF_RE.match(s)
     if not m:
-        raise ValueError(f"Bad $ref '{s}', expected 'alias:id'")
+        raise ValueError(f"Bad $ref '{s}', expected 'alias[:field]:id'")
     alias = m.group(1).strip()
-    id_ = m.group(2).strip()
+    field = m.group(2).strip() if m.group(2) else None
+    id_   = m.group(3).strip()
     validate_alias(alias)
     if not id_:
         raise ValueError(f"Bad $ref '{s}', empty id")
-    return alias, id_
+    return alias, field, id_
 
 
 def apply_alias(
@@ -271,8 +311,55 @@ def resolve_node(
 
     if isinstance(node, dict):
         # $ref node?
+        # $ref node?
         if "$ref" in node and isinstance(node["$ref"], str):
-            alias, id_ = parse_ref(node["$ref"])
+            alias, field, id_ = parse_ref(node["$ref"])
+
+            # Try to parse id_ as a Python literal list
+            if id_.startswith("[") and id_.endswith("]"):
+                try:
+                    values = ast.literal_eval(id_)
+                    if not isinstance(values, list):
+                        raise ValueError
+                except Exception:
+                    raise ValueError(f"Bad $ref array syntax: {id_}")
+
+                results: List[Any] = []
+                for v in values:
+                    matches = lookup_records(indexes[alias], field, str(v))
+                    if not matches:
+                        raise ValueError(f"Missing record for {alias}.{field} = {v}")
+                    for rec in matches:
+                        base = deepcopy(rec)
+                        aliased = apply_alias(base, node.get("$alias"), strict_projection)
+                        results.append(resolve_node(aliased, indexes, seen_stack, strict_projection))
+                return results
+
+            # If a field qualifier is present (alias.field:id), return ALL matches as a list.
+            if field is not None:
+                key = f"{alias}.{field}:{id_}"
+                if key in seen_stack:
+                    raise ValueError(
+                        f"Circular reference detected: {' -> '.join(seen_stack)} -> {key}"
+                    )
+                if alias not in indexes:
+                    raise ValueError(f"Unknown alias '{alias}' in $ref '{node['$ref']}'")
+
+                matches = lookup_records(indexes[alias], field, str(id_))
+                if not matches:
+                    raise ValueError(f"Missing record for {alias}.{field} = {id_}")
+
+                seen_stack.append(key)
+                out_list: List[Dict[str, Any]] = []
+                for rec in matches:
+                    base = deepcopy(rec)
+                    aliased = apply_alias(base, node.get("$alias"), strict_projection)
+                    resolved = resolve_node(aliased, indexes, seen_stack, strict_projection)
+                    out_list.append(resolved)
+                seen_stack.pop()
+                return out_list
+
+            # No field qualifier: single-record lookup by id (existing behavior)
             key = f"{alias}:{id_}"
             if key in seen_stack:
                 raise ValueError(
@@ -280,19 +367,17 @@ def resolve_node(
                 )
             if alias not in indexes:
                 raise ValueError(f"Unknown alias '{alias}' in $ref '{node['$ref']}'")
-            rec = indexes[alias].get(str(id_))
+
+            rec = lookup_record(indexes[alias], None, str(id_))
             if rec is None:
-                raise ValueError(
-                    f"Missing id '{id_}' for alias '{alias}' in $ref '{node['$ref']}'"
-                )
+                raise ValueError(f"Missing record for {alias} = {id_}")
 
             seen_stack.append(key)
             base = deepcopy(rec)
             aliased = apply_alias(base, node.get("$alias"), strict_projection)
-            resolved = aliased
-            final = resolve_node(resolved, indexes, seen_stack, strict_projection)
+            resolved = resolve_node(aliased, indexes, seen_stack, strict_projection)
             seen_stack.pop()
-            return final
+            return resolved
 
         # Regular object: recurse
         out: Dict[str, Any] = {}
