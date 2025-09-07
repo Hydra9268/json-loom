@@ -185,8 +185,8 @@ The smoke tests are provided to help contributors quickly verify that `jsonloom.
 expected after making code changes. They also serve as usage examples for common `$ref` and 
 `$alias` scenarios.
 
-Think of these as **unit tests for the compiler**:  when you add a new major feature, you should
-also add a new smoke test so that future changes don’t accidentally break it.
+Think of these as **unit tests for the compiler**: when you add a new major feature, you should 
+also add a new smoke test to ensure your new functionality doesn’t accidentally break the existing code.
 
 A batch runner and sample preprocessor files are included under `smoke_tests/` to validate the
 compiler end-to-end.
