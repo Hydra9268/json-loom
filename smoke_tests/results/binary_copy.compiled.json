@@ -1,0 +1,6 @@
+{
+  "binary_copy": {
+    "$copy": "binary",
+    "target": "data/binary.bson"
+  }
+}

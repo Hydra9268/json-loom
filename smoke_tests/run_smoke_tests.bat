@@ -37,6 +37,7 @@ for %%I in (
   preprocessor_circular_reference.json
   preprocessor_datalarge.json
   preprocessor_inventory_array.json
+  preprocessor_binary_copy.json
 ) do (
   if not exist "%%~I" (
     echo Missing input: %%~I >"%LOG%"
@@ -48,17 +49,22 @@ for %%I in (
 
 REM ------------------ define test table ----------------------
 REM Format: label|command|should_fail(0/1)
+
+REM --- expected to pass ------------
 set "T1=default_alias_id|%LOOM% preprocessor_default_alias_id.json|0"
 set "T2=field_qualified|%LOOM% preprocessor_field_qualified.json|0"
 set "T3=whitespace_tolerance|%LOOM% preprocessor_whitespace_tolerance.json|0"
 set "T4=alias_warn|%LOOM% preprocessor_strict_projection.json|0"
 set "T5=object_map_imports|%LOOM% preprocessor_object_map_imports.json|0"
-set "T6=alias_strict|%LOOM% preprocessor_strict_projection.json --strict-projection|1"
-set "T7=missing_record|%LOOM% preprocessor_missing_record.json|1"
-set "T8=unknown_alias|%LOOM% preprocessor_unknown_alias.json|1"
-set "T9=circular_reference|%LOOM% preprocessor_circular_reference.json|1"
-set "T10=order_items_array|%LOOM% preprocessor_datalarge.json|0"
-set "T11=inventory_array|%LOOM% preprocessor_inventory_array.json|0"
+set "T6=order_items_array|%LOOM% preprocessor_datalarge.json|0"
+set "T7=inventory_array|%LOOM% preprocessor_inventory_array.json|0"
+set "T8=binary_copy|%LOOM% preprocessor_binary_copy.json|0"
+
+REM --- expected to fail ------------
+set "T9=alias_strict|%LOOM% preprocessor_strict_projection.json --strict-projection|1"
+set "T10=missing_record|%LOOM% preprocessor_missing_record.json|1"
+set "T11=unknown_alias|%LOOM% preprocessor_unknown_alias.json|1"
+set "T12=circular_reference|%LOOM% preprocessor_circular_reference.json|1"
 
 REM ------------------ run tests ------------------------------
 (
@@ -70,7 +76,7 @@ REM ------------------ run tests ------------------------------
   set "PASS_COUNT=0"
   set "FAIL_COUNT=0"
 
-  for /L %%N in (1,1,11) do (
+  for /L %%N in (1,1,12) do (
     for /f "tokens=1,2,3 delims=|" %%A in ("!T%%N!") do (
       set "LABEL=%%~A"
       set "CMD=%%~B"

@@ -1,0 +1,9 @@
+{
+  "$imports": {
+    "binary": "data/binary.bson"
+  },
+  "binary_copy": {
+    "$copy": "binary",
+    "target": "data/binary.bson"
+  }
+}
