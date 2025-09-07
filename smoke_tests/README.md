@@ -46,7 +46,7 @@ for %%I in (
   preprocessor_circular_reference.json
   preprocessor_datalarge.json
   preprocessor_inventory_array.json
-  // <-- add here
+  [ADD HERE]
 ) do (
   if not exist "%%~I" (
     echo Missing input: %%~I >"%LOG%"
