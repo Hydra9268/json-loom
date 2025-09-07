@@ -127,7 +127,7 @@
       "last_counted_at": "2025-03-23T12:00:00Z"
     }
   ],
-  "product": [
+  "products": [
     {
       "id": 119,
       "sku": "SKU-000119",
@@ -269,7 +269,85 @@
       "description": "Rgiyfna ghqrfu twsnsm xbrwzxv qoyk rbjdjuag. Jqoik ezxm shot ffux gatuwjjg vfcz iwkko ttabpfkm zyrpehb. Gnloqgowc vldzbjdhm opmptlz vwugxexe tmpgoc npkkyosd eatjkivafr twijgrxqe somsidh."
     }
   ],
-  "category": [
+  "suppliers": [
+    {
+      "id": 31,
+      "name": "Supplier 31",
+      "contact": {
+        "email": "contact31@supplier.example.com",
+        "phone": "+1-555-390-4288"
+      },
+      "address": {
+        "line1": "4454 Bouacm St",
+        "city": "Vivvlda",
+        "region": "CA",
+        "postal_code": "92396",
+        "country": "US"
+      },
+      "lead_time_days": 29,
+      "rating": 4.71,
+      "is_preferred": false,
+      "notes": "Wdkptrcf qorwa hqjk mxfalvl ujhqiz uima ihekmvec mqvtuvhnh enjtkore. Esrvzgejw qenyeusfk rrxd kexay nnjoxu ieygdefay titsthth."
+    },
+    {
+      "id": 25,
+      "name": "Supplier 25",
+      "contact": {
+        "email": "contact25@supplier.example.com",
+        "phone": "+1-555-334-4322"
+      },
+      "address": {
+        "line1": "4101 Tleydd St",
+        "city": "Cvvptay",
+        "region": "CA",
+        "postal_code": "94435",
+        "country": "US"
+      },
+      "lead_time_days": 3,
+      "rating": 4.62,
+      "is_preferred": false,
+      "notes": "Sipfyqi hysebqz prbqlmv fodwqokwaa gmsdkltif ihiptklf ngnwyll miofsesvhd. Hrnmgezxep afnpeuqrxk pjirsbmdwf gipu oxki lrrzil ndlv gssuurfy."
+    },
+    {
+      "id": 17,
+      "name": "Supplier 17",
+      "contact": {
+        "email": "contact17@supplier.example.com",
+        "phone": "+1-555-999-2522"
+      },
+      "address": {
+        "line1": "6115 Kfdmmo St",
+        "city": "Imwpznu",
+        "region": "CA",
+        "postal_code": "96528",
+        "country": "US"
+      },
+      "lead_time_days": 7,
+      "rating": 2.78,
+      "is_preferred": false,
+      "notes": "Fdnspzsvof myltavxe pdnobci kawvqyxsx hvkqqwwt nvxh. Vvumer baufqppf ypkh ibqhru mhcoozs cpokdpx admnbrrac ttujqrguvo lbhokr."
+    },
+    {
+      "id": 6,
+      "name": "Supplier 6",
+      "contact": {
+        "email": "contact6@supplier.example.com",
+        "phone": "+1-555-919-3692"
+      },
+      "address": {
+        "line1": "4006 Qfrfkr St",
+        "city": "Nohzmuf",
+        "region": "CA",
+        "postal_code": "91526",
+        "country": "US"
+      },
+      "lead_time_days": 22,
+      "rating": 4.14,
+      "is_preferred": false,
+      "notes": "Osnma ggiywzzcs zrfl godivp uktmtmsd lotfvw jtscvekdhj flwe mntesmnf urwufrf. Efkotb lapegmrqup vpnwopf sazy jbihr fyosxy prqdsdiyrl ybyxorgn xuyh."
+    }
+  ],
+  "categories": [
     {
       "id": 13,
       "name": "Category 13",
@@ -373,84 +451,6 @@
       },
       "created_at": "2023-07-07T12:00:00Z",
       "updated_at": "2024-07-07T12:00:00Z"
-    }
-  ],
-  "supplier": [
-    {
-      "id": 31,
-      "name": "Supplier 31",
-      "contact": {
-        "email": "contact31@supplier.example.com",
-        "phone": "+1-555-390-4288"
-      },
-      "address": {
-        "line1": "4454 Bouacm St",
-        "city": "Vivvlda",
-        "region": "CA",
-        "postal_code": "92396",
-        "country": "US"
-      },
-      "lead_time_days": 29,
-      "rating": 4.71,
-      "is_preferred": false,
-      "notes": "Wdkptrcf qorwa hqjk mxfalvl ujhqiz uima ihekmvec mqvtuvhnh enjtkore. Esrvzgejw qenyeusfk rrxd kexay nnjoxu ieygdefay titsthth."
-    },
-    {
-      "id": 25,
-      "name": "Supplier 25",
-      "contact": {
-        "email": "contact25@supplier.example.com",
-        "phone": "+1-555-334-4322"
-      },
-      "address": {
-        "line1": "4101 Tleydd St",
-        "city": "Cvvptay",
-        "region": "CA",
-        "postal_code": "94435",
-        "country": "US"
-      },
-      "lead_time_days": 3,
-      "rating": 4.62,
-      "is_preferred": false,
-      "notes": "Sipfyqi hysebqz prbqlmv fodwqokwaa gmsdkltif ihiptklf ngnwyll miofsesvhd. Hrnmgezxep afnpeuqrxk pjirsbmdwf gipu oxki lrrzil ndlv gssuurfy."
-    },
-    {
-      "id": 17,
-      "name": "Supplier 17",
-      "contact": {
-        "email": "contact17@supplier.example.com",
-        "phone": "+1-555-999-2522"
-      },
-      "address": {
-        "line1": "6115 Kfdmmo St",
-        "city": "Imwpznu",
-        "region": "CA",
-        "postal_code": "96528",
-        "country": "US"
-      },
-      "lead_time_days": 7,
-      "rating": 2.78,
-      "is_preferred": false,
-      "notes": "Fdnspzsvof myltavxe pdnobci kawvqyxsx hvkqqwwt nvxh. Vvumer baufqppf ypkh ibqhru mhcoozs cpokdpx admnbrrac ttujqrguvo lbhokr."
-    },
-    {
-      "id": 6,
-      "name": "Supplier 6",
-      "contact": {
-        "email": "contact6@supplier.example.com",
-        "phone": "+1-555-919-3692"
-      },
-      "address": {
-        "line1": "4006 Qfrfkr St",
-        "city": "Nohzmuf",
-        "region": "CA",
-        "postal_code": "91526",
-        "country": "US"
-      },
-      "lead_time_days": 22,
-      "rating": 4.14,
-      "is_preferred": false,
-      "notes": "Osnma ggiywzzcs zrfl godivp uktmtmsd lotfvw jtscvekdhj flwe mntesmnf urwufrf. Efkotb lapegmrqup vpnwopf sazy jbihr fyosxy prqdsdiyrl ybyxorgn xuyh."
     }
   ]
 }
