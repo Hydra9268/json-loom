@@ -26,14 +26,14 @@ This will:
 When you add a new feature to `jsonloom.py`, you should also add a new smoke test
 to ensure it keeps working in the future.
 
-1. **Create a preprocessor file**
+1. **Create a preprocessor file** - 
    Add a new JSON file named `preprocessor_<feature>.json`
    (underscore style, to stay consistent).
 
-2. **Update the presence check**
+2. **Update the presence check** - 
    In `run_smoke_tests.bat`, add the new file to the block that verifies inputs exist.
 
-3. **Update the test table**
+3. **Update the test table** - 
    Add a new `T#` entry at the bottom of the test table in `run_smoke_tests.bat`:
 
    ```
@@ -43,7 +43,7 @@ to ensure it keeps working in the future.
    * Replace `my_feature` with a descriptive label
    * Use `|0` if the test should succeed, or `|1` if it’s expected to fail
 
-4. **Bump the loop counter**
+4. **Bump the loop counter** - 
    Update the `for /L %%N in (1,1,N)` line to include the new highest test number.
 
 ---
