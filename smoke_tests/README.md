@@ -33,10 +33,33 @@ to ensure it keeps working in the future.
 2. **Update the presence check** - 
    In `run_smoke_tests.bat`, add the new file to the block that verifies inputs exist.
 
+```bat
+REM ---- presence checks ----
+for %%I in (
+  preprocessor_default_alias_id.json
+  preprocessor_field_qualified.json
+  preprocessor_whitespace_tolerance.json
+  preprocessor_strict_projection.json
+  preprocessor_object_map_imports.json
+  preprocessor_missing_record.json
+  preprocessor_unknown_alias.json
+  preprocessor_circular_reference.json
+  preprocessor_datalarge.json
+  preprocessor_inventory_array.json
+) do (
+  if not exist "%%~I" (
+    echo Missing input: %%~I >"%LOG%"
+    type "%LOG%"
+    popd
+    exit /b 3
+  )
+)
+```
+
 3. **Update the test table** - 
    Add a new `T#` entry at the bottom of the test table in `run_smoke_tests.bat`:
 
-   ```
+   ```bat
    set "T12=my_feature|%LOOM% preprocessor_my_feature.json|0"
    ```
 
@@ -55,19 +78,19 @@ Adding a new `$ref` feature test:
 1. Create `preprocessor_newref.json` in this folder
 2. Add to presence check:
 
-```
+```bat
 preprocessor_newref.json
 ```
 
 3. Add to table:
 
-```
+```bat
 set "T12=newref|%LOOM% preprocessor_newref.json|0"
 ```
 
 4. Update loop:
 
-```
+```bat
 for /L %%N in (1,1,12) do (
 ```
 
