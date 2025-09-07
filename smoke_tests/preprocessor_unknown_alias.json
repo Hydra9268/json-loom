@@ -1,0 +1,8 @@
+{
+  "$imports": {
+    "order": "data/orders.json"
+  },
+  "bad": {
+    "$ref": "orders:1"
+  }
+}

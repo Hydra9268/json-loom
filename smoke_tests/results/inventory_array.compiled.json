@@ -1,0 +1,44 @@
+{
+  "inventory": [
+    {
+      "id": 119,
+      "product_id": 119,
+      "warehouse": "W3-SAC",
+      "on_hand": 255,
+      "reserved": 20,
+      "reorder_point": 16,
+      "reorder_qty": 188,
+      "last_counted_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 213,
+      "product_id": 213,
+      "warehouse": "W2-SF",
+      "on_hand": 323,
+      "reserved": 9,
+      "reorder_point": 62,
+      "reorder_qty": 200,
+      "last_counted_at": "2025-09-20T12:00:00Z"
+    },
+    {
+      "id": 123,
+      "product_id": 123,
+      "warehouse": "W1-LA",
+      "on_hand": 413,
+      "reserved": 19,
+      "reorder_point": 39,
+      "reorder_qty": 74,
+      "last_counted_at": "2025-02-14T12:00:00Z"
+    },
+    {
+      "id": 222,
+      "product_id": 222,
+      "warehouse": "W3-SAC",
+      "on_hand": 69,
+      "reserved": 24,
+      "reorder_point": 72,
+      "reorder_qty": 79,
+      "last_counted_at": "2025-03-23T12:00:00Z"
+    }
+  ]
+}

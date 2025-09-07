@@ -1,0 +1,8 @@
+{
+  "$imports": {
+    "customer": "data/customers.json"
+  },
+  "c": {
+    "$ref": "customer:169"
+  }
+}

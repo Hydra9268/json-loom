@@ -1,0 +1,7 @@
+{
+  "$imports": { 
+    "a": "data/a.json",
+    "b": "data/b.json"
+  },
+  "root": { "$ref": "a:1" }
+}

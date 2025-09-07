@@ -1,0 +1,2402 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "warehouse": "W4-SD",
+    "on_hand": 432,
+    "reserved": 5,
+    "reorder_point": 40,
+    "reorder_qty": 155,
+    "last_counted_at": "2025-08-07T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "product_id": 2,
+    "warehouse": "W1-LA",
+    "on_hand": 149,
+    "reserved": 1,
+    "reorder_point": 37,
+    "reorder_qty": 39,
+    "last_counted_at": "2025-02-13T12:00:00Z"
+  },
+  {
+    "id": 3,
+    "product_id": 3,
+    "warehouse": "W4-SD",
+    "on_hand": 212,
+    "reserved": 49,
+    "reorder_point": 25,
+    "reorder_qty": 128,
+    "last_counted_at": "2025-03-10T12:00:00Z"
+  },
+  {
+    "id": 4,
+    "product_id": 4,
+    "warehouse": "W4-SD",
+    "on_hand": 316,
+    "reserved": 46,
+    "reorder_point": 79,
+    "reorder_qty": 153,
+    "last_counted_at": "2025-07-16T12:00:00Z"
+  },
+  {
+    "id": 5,
+    "product_id": 5,
+    "warehouse": "W4-SD",
+    "on_hand": 88,
+    "reserved": 47,
+    "reorder_point": 19,
+    "reorder_qty": 148,
+    "last_counted_at": "2025-03-06T12:00:00Z"
+  },
+  {
+    "id": 6,
+    "product_id": 6,
+    "warehouse": "W3-SAC",
+    "on_hand": 237,
+    "reserved": 36,
+    "reorder_point": 33,
+    "reorder_qty": 52,
+    "last_counted_at": "2025-05-16T12:00:00Z"
+  },
+  {
+    "id": 7,
+    "product_id": 7,
+    "warehouse": "W4-SD",
+    "on_hand": 333,
+    "reserved": 35,
+    "reorder_point": 64,
+    "reorder_qty": 132,
+    "last_counted_at": "2025-01-22T12:00:00Z"
+  },
+  {
+    "id": 8,
+    "product_id": 8,
+    "warehouse": "W4-SD",
+    "on_hand": 52,
+    "reserved": 25,
+    "reorder_point": 66,
+    "reorder_qty": 43,
+    "last_counted_at": "2025-05-17T12:00:00Z"
+  },
+  {
+    "id": 9,
+    "product_id": 9,
+    "warehouse": "W3-SAC",
+    "on_hand": 235,
+    "reserved": 39,
+    "reorder_point": 28,
+    "reorder_qty": 105,
+    "last_counted_at": "2025-08-18T12:00:00Z"
+  },
+  {
+    "id": 10,
+    "product_id": 10,
+    "warehouse": "W3-SAC",
+    "on_hand": 354,
+    "reserved": 11,
+    "reorder_point": 34,
+    "reorder_qty": 100,
+    "last_counted_at": "2025-03-20T12:00:00Z"
+  },
+  {
+    "id": 11,
+    "product_id": 11,
+    "warehouse": "W1-LA",
+    "on_hand": 13,
+    "reserved": 50,
+    "reorder_point": 34,
+    "reorder_qty": 94,
+    "last_counted_at": "2025-02-08T12:00:00Z"
+  },
+  {
+    "id": 12,
+    "product_id": 12,
+    "warehouse": "W4-SD",
+    "on_hand": 122,
+    "reserved": 16,
+    "reorder_point": 53,
+    "reorder_qty": 88,
+    "last_counted_at": "2025-03-10T12:00:00Z"
+  },
+  {
+    "id": 13,
+    "product_id": 13,
+    "warehouse": "W4-SD",
+    "on_hand": 426,
+    "reserved": 48,
+    "reorder_point": 22,
+    "reorder_qty": 36,
+    "last_counted_at": "2025-06-11T12:00:00Z"
+  },
+  {
+    "id": 14,
+    "product_id": 14,
+    "warehouse": "W2-SF",
+    "on_hand": 439,
+    "reserved": 11,
+    "reorder_point": 18,
+    "reorder_qty": 162,
+    "last_counted_at": "2025-02-27T12:00:00Z"
+  },
+  {
+    "id": 15,
+    "product_id": 15,
+    "warehouse": "W3-SAC",
+    "on_hand": 43,
+    "reserved": 28,
+    "reorder_point": 21,
+    "reorder_qty": 174,
+    "last_counted_at": "2025-01-15T12:00:00Z"
+  },
+  {
+    "id": 16,
+    "product_id": 16,
+    "warehouse": "W1-LA",
+    "on_hand": 222,
+    "reserved": 29,
+    "reorder_point": 70,
+    "reorder_qty": 187,
+    "last_counted_at": "2025-07-22T12:00:00Z"
+  },
+  {
+    "id": 17,
+    "product_id": 17,
+    "warehouse": "W2-SF",
+    "on_hand": 423,
+    "reserved": 7,
+    "reorder_point": 36,
+    "reorder_qty": 44,
+    "last_counted_at": "2025-07-28T12:00:00Z"
+  },
+  {
+    "id": 18,
+    "product_id": 18,
+    "warehouse": "W3-SAC",
+    "on_hand": 160,
+    "reserved": 15,
+    "reorder_point": 80,
+    "reorder_qty": 70,
+    "last_counted_at": "2025-04-13T12:00:00Z"
+  },
+  {
+    "id": 19,
+    "product_id": 19,
+    "warehouse": "W3-SAC",
+    "on_hand": 82,
+    "reserved": 22,
+    "reorder_point": 51,
+    "reorder_qty": 22,
+    "last_counted_at": "2025-04-12T12:00:00Z"
+  },
+  {
+    "id": 20,
+    "product_id": 20,
+    "warehouse": "W2-SF",
+    "on_hand": 124,
+    "reserved": 44,
+    "reorder_point": 32,
+    "reorder_qty": 42,
+    "last_counted_at": "2025-01-04T12:00:00Z"
+  },
+  {
+    "id": 21,
+    "product_id": 21,
+    "warehouse": "W2-SF",
+    "on_hand": 172,
+    "reserved": 19,
+    "reorder_point": 61,
+    "reorder_qty": 135,
+    "last_counted_at": "2025-06-25T12:00:00Z"
+  },
+  {
+    "id": 22,
+    "product_id": 22,
+    "warehouse": "W1-LA",
+    "on_hand": 149,
+    "reserved": 37,
+    "reorder_point": 55,
+    "reorder_qty": 166,
+    "last_counted_at": "2025-08-16T12:00:00Z"
+  },
+  {
+    "id": 23,
+    "product_id": 23,
+    "warehouse": "W1-LA",
+    "on_hand": 119,
+    "reserved": 6,
+    "reorder_point": 71,
+    "reorder_qty": 20,
+    "last_counted_at": "2025-06-14T12:00:00Z"
+  },
+  {
+    "id": 24,
+    "product_id": 24,
+    "warehouse": "W2-SF",
+    "on_hand": 189,
+    "reserved": 35,
+    "reorder_point": 35,
+    "reorder_qty": 67,
+    "last_counted_at": "2025-01-03T12:00:00Z"
+  },
+  {
+    "id": 25,
+    "product_id": 25,
+    "warehouse": "W3-SAC",
+    "on_hand": 410,
+    "reserved": 13,
+    "reorder_point": 52,
+    "reorder_qty": 98,
+    "last_counted_at": "2025-06-13T12:00:00Z"
+  },
+  {
+    "id": 26,
+    "product_id": 26,
+    "warehouse": "W2-SF",
+    "on_hand": 402,
+    "reserved": 25,
+    "reorder_point": 70,
+    "reorder_qty": 177,
+    "last_counted_at": "2025-09-17T12:00:00Z"
+  },
+  {
+    "id": 27,
+    "product_id": 27,
+    "warehouse": "W2-SF",
+    "on_hand": 223,
+    "reserved": 32,
+    "reorder_point": 65,
+    "reorder_qty": 80,
+    "last_counted_at": "2025-07-21T12:00:00Z"
+  },
+  {
+    "id": 28,
+    "product_id": 28,
+    "warehouse": "W3-SAC",
+    "on_hand": 342,
+    "reserved": 19,
+    "reorder_point": 49,
+    "reorder_qty": 168,
+    "last_counted_at": "2025-09-04T12:00:00Z"
+  },
+  {
+    "id": 29,
+    "product_id": 29,
+    "warehouse": "W1-LA",
+    "on_hand": 338,
+    "reserved": 25,
+    "reorder_point": 34,
+    "reorder_qty": 53,
+    "last_counted_at": "2025-07-28T12:00:00Z"
+  },
+  {
+    "id": 30,
+    "product_id": 30,
+    "warehouse": "W4-SD",
+    "on_hand": 389,
+    "reserved": 12,
+    "reorder_point": 27,
+    "reorder_qty": 182,
+    "last_counted_at": "2025-01-13T12:00:00Z"
+  },
+  {
+    "id": 31,
+    "product_id": 31,
+    "warehouse": "W1-LA",
+    "on_hand": 140,
+    "reserved": 8,
+    "reorder_point": 47,
+    "reorder_qty": 57,
+    "last_counted_at": "2025-03-25T12:00:00Z"
+  },
+  {
+    "id": 32,
+    "product_id": 32,
+    "warehouse": "W1-LA",
+    "on_hand": 45,
+    "reserved": 39,
+    "reorder_point": 32,
+    "reorder_qty": 88,
+    "last_counted_at": "2025-08-09T12:00:00Z"
+  },
+  {
+    "id": 33,
+    "product_id": 33,
+    "warehouse": "W2-SF",
+    "on_hand": 328,
+    "reserved": 48,
+    "reorder_point": 53,
+    "reorder_qty": 32,
+    "last_counted_at": "2025-07-20T12:00:00Z"
+  },
+  {
+    "id": 34,
+    "product_id": 34,
+    "warehouse": "W4-SD",
+    "on_hand": 277,
+    "reserved": 10,
+    "reorder_point": 17,
+    "reorder_qty": 167,
+    "last_counted_at": "2025-04-17T12:00:00Z"
+  },
+  {
+    "id": 35,
+    "product_id": 35,
+    "warehouse": "W4-SD",
+    "on_hand": 68,
+    "reserved": 7,
+    "reorder_point": 22,
+    "reorder_qty": 55,
+    "last_counted_at": "2025-01-07T12:00:00Z"
+  },
+  {
+    "id": 36,
+    "product_id": 36,
+    "warehouse": "W2-SF",
+    "on_hand": 370,
+    "reserved": 37,
+    "reorder_point": 74,
+    "reorder_qty": 69,
+    "last_counted_at": "2025-01-04T12:00:00Z"
+  },
+  {
+    "id": 37,
+    "product_id": 37,
+    "warehouse": "W3-SAC",
+    "on_hand": 455,
+    "reserved": 0,
+    "reorder_point": 57,
+    "reorder_qty": 179,
+    "last_counted_at": "2025-06-10T12:00:00Z"
+  },
+  {
+    "id": 38,
+    "product_id": 38,
+    "warehouse": "W4-SD",
+    "on_hand": 218,
+    "reserved": 5,
+    "reorder_point": 65,
+    "reorder_qty": 163,
+    "last_counted_at": "2025-01-24T12:00:00Z"
+  },
+  {
+    "id": 39,
+    "product_id": 39,
+    "warehouse": "W4-SD",
+    "on_hand": 262,
+    "reserved": 2,
+    "reorder_point": 40,
+    "reorder_qty": 29,
+    "last_counted_at": "2025-05-24T12:00:00Z"
+  },
+  {
+    "id": 40,
+    "product_id": 40,
+    "warehouse": "W1-LA",
+    "on_hand": 3,
+    "reserved": 20,
+    "reorder_point": 44,
+    "reorder_qty": 127,
+    "last_counted_at": "2025-09-01T12:00:00Z"
+  },
+  {
+    "id": 41,
+    "product_id": 41,
+    "warehouse": "W1-LA",
+    "on_hand": 411,
+    "reserved": 44,
+    "reorder_point": 35,
+    "reorder_qty": 50,
+    "last_counted_at": "2025-05-07T12:00:00Z"
+  },
+  {
+    "id": 42,
+    "product_id": 42,
+    "warehouse": "W2-SF",
+    "on_hand": 213,
+    "reserved": 0,
+    "reorder_point": 55,
+    "reorder_qty": 146,
+    "last_counted_at": "2025-05-07T12:00:00Z"
+  },
+  {
+    "id": 43,
+    "product_id": 43,
+    "warehouse": "W2-SF",
+    "on_hand": 52,
+    "reserved": 47,
+    "reorder_point": 23,
+    "reorder_qty": 50,
+    "last_counted_at": "2025-06-09T12:00:00Z"
+  },
+  {
+    "id": 44,
+    "product_id": 44,
+    "warehouse": "W3-SAC",
+    "on_hand": 317,
+    "reserved": 40,
+    "reorder_point": 26,
+    "reorder_qty": 167,
+    "last_counted_at": "2025-02-25T12:00:00Z"
+  },
+  {
+    "id": 45,
+    "product_id": 45,
+    "warehouse": "W4-SD",
+    "on_hand": 304,
+    "reserved": 47,
+    "reorder_point": 23,
+    "reorder_qty": 172,
+    "last_counted_at": "2025-07-27T12:00:00Z"
+  },
+  {
+    "id": 46,
+    "product_id": 46,
+    "warehouse": "W1-LA",
+    "on_hand": 308,
+    "reserved": 4,
+    "reorder_point": 40,
+    "reorder_qty": 117,
+    "last_counted_at": "2025-05-03T12:00:00Z"
+  },
+  {
+    "id": 47,
+    "product_id": 47,
+    "warehouse": "W4-SD",
+    "on_hand": 329,
+    "reserved": 26,
+    "reorder_point": 50,
+    "reorder_qty": 199,
+    "last_counted_at": "2025-03-01T12:00:00Z"
+  },
+  {
+    "id": 48,
+    "product_id": 48,
+    "warehouse": "W3-SAC",
+    "on_hand": 500,
+    "reserved": 36,
+    "reorder_point": 48,
+    "reorder_qty": 158,
+    "last_counted_at": "2025-04-26T12:00:00Z"
+  },
+  {
+    "id": 49,
+    "product_id": 49,
+    "warehouse": "W4-SD",
+    "on_hand": 12,
+    "reserved": 36,
+    "reorder_point": 13,
+    "reorder_qty": 39,
+    "last_counted_at": "2025-07-27T12:00:00Z"
+  },
+  {
+    "id": 50,
+    "product_id": 50,
+    "warehouse": "W1-LA",
+    "on_hand": 54,
+    "reserved": 48,
+    "reorder_point": 20,
+    "reorder_qty": 107,
+    "last_counted_at": "2025-04-24T12:00:00Z"
+  },
+  {
+    "id": 51,
+    "product_id": 51,
+    "warehouse": "W4-SD",
+    "on_hand": 9,
+    "reserved": 39,
+    "reorder_point": 59,
+    "reorder_qty": 94,
+    "last_counted_at": "2025-04-20T12:00:00Z"
+  },
+  {
+    "id": 52,
+    "product_id": 52,
+    "warehouse": "W3-SAC",
+    "on_hand": 186,
+    "reserved": 40,
+    "reorder_point": 35,
+    "reorder_qty": 187,
+    "last_counted_at": "2025-05-20T12:00:00Z"
+  },
+  {
+    "id": 53,
+    "product_id": 53,
+    "warehouse": "W4-SD",
+    "on_hand": 106,
+    "reserved": 8,
+    "reorder_point": 17,
+    "reorder_qty": 20,
+    "last_counted_at": "2025-07-02T12:00:00Z"
+  },
+  {
+    "id": 54,
+    "product_id": 54,
+    "warehouse": "W1-LA",
+    "on_hand": 190,
+    "reserved": 12,
+    "reorder_point": 52,
+    "reorder_qty": 71,
+    "last_counted_at": "2025-01-12T12:00:00Z"
+  },
+  {
+    "id": 55,
+    "product_id": 55,
+    "warehouse": "W2-SF",
+    "on_hand": 91,
+    "reserved": 50,
+    "reorder_point": 54,
+    "reorder_qty": 130,
+    "last_counted_at": "2025-03-10T12:00:00Z"
+  },
+  {
+    "id": 56,
+    "product_id": 56,
+    "warehouse": "W1-LA",
+    "on_hand": 442,
+    "reserved": 19,
+    "reorder_point": 73,
+    "reorder_qty": 31,
+    "last_counted_at": "2025-05-14T12:00:00Z"
+  },
+  {
+    "id": 57,
+    "product_id": 57,
+    "warehouse": "W3-SAC",
+    "on_hand": 282,
+    "reserved": 44,
+    "reorder_point": 52,
+    "reorder_qty": 102,
+    "last_counted_at": "2025-06-04T12:00:00Z"
+  },
+  {
+    "id": 58,
+    "product_id": 58,
+    "warehouse": "W4-SD",
+    "on_hand": 291,
+    "reserved": 46,
+    "reorder_point": 36,
+    "reorder_qty": 61,
+    "last_counted_at": "2025-05-02T12:00:00Z"
+  },
+  {
+    "id": 59,
+    "product_id": 59,
+    "warehouse": "W3-SAC",
+    "on_hand": 456,
+    "reserved": 48,
+    "reorder_point": 67,
+    "reorder_qty": 192,
+    "last_counted_at": "2025-05-04T12:00:00Z"
+  },
+  {
+    "id": 60,
+    "product_id": 60,
+    "warehouse": "W1-LA",
+    "on_hand": 466,
+    "reserved": 40,
+    "reorder_point": 36,
+    "reorder_qty": 114,
+    "last_counted_at": "2025-04-19T12:00:00Z"
+  },
+  {
+    "id": 61,
+    "product_id": 61,
+    "warehouse": "W1-LA",
+    "on_hand": 320,
+    "reserved": 0,
+    "reorder_point": 40,
+    "reorder_qty": 151,
+    "last_counted_at": "2025-02-23T12:00:00Z"
+  },
+  {
+    "id": 62,
+    "product_id": 62,
+    "warehouse": "W4-SD",
+    "on_hand": 416,
+    "reserved": 49,
+    "reorder_point": 61,
+    "reorder_qty": 147,
+    "last_counted_at": "2025-08-22T12:00:00Z"
+  },
+  {
+    "id": 63,
+    "product_id": 63,
+    "warehouse": "W1-LA",
+    "on_hand": 319,
+    "reserved": 43,
+    "reorder_point": 56,
+    "reorder_qty": 59,
+    "last_counted_at": "2025-02-17T12:00:00Z"
+  },
+  {
+    "id": 64,
+    "product_id": 64,
+    "warehouse": "W3-SAC",
+    "on_hand": 346,
+    "reserved": 32,
+    "reorder_point": 58,
+    "reorder_qty": 155,
+    "last_counted_at": "2025-01-09T12:00:00Z"
+  },
+  {
+    "id": 65,
+    "product_id": 65,
+    "warehouse": "W2-SF",
+    "on_hand": 310,
+    "reserved": 16,
+    "reorder_point": 28,
+    "reorder_qty": 171,
+    "last_counted_at": "2025-01-02T12:00:00Z"
+  },
+  {
+    "id": 66,
+    "product_id": 66,
+    "warehouse": "W2-SF",
+    "on_hand": 167,
+    "reserved": 49,
+    "reorder_point": 79,
+    "reorder_qty": 182,
+    "last_counted_at": "2025-06-16T12:00:00Z"
+  },
+  {
+    "id": 67,
+    "product_id": 67,
+    "warehouse": "W2-SF",
+    "on_hand": 311,
+    "reserved": 45,
+    "reorder_point": 79,
+    "reorder_qty": 31,
+    "last_counted_at": "2025-04-16T12:00:00Z"
+  },
+  {
+    "id": 68,
+    "product_id": 68,
+    "warehouse": "W1-LA",
+    "on_hand": 109,
+    "reserved": 28,
+    "reorder_point": 70,
+    "reorder_qty": 72,
+    "last_counted_at": "2025-02-05T12:00:00Z"
+  },
+  {
+    "id": 69,
+    "product_id": 69,
+    "warehouse": "W1-LA",
+    "on_hand": 188,
+    "reserved": 35,
+    "reorder_point": 62,
+    "reorder_qty": 165,
+    "last_counted_at": "2025-05-17T12:00:00Z"
+  },
+  {
+    "id": 70,
+    "product_id": 70,
+    "warehouse": "W3-SAC",
+    "on_hand": 105,
+    "reserved": 44,
+    "reorder_point": 17,
+    "reorder_qty": 136,
+    "last_counted_at": "2025-05-17T12:00:00Z"
+  },
+  {
+    "id": 71,
+    "product_id": 71,
+    "warehouse": "W4-SD",
+    "on_hand": 485,
+    "reserved": 35,
+    "reorder_point": 19,
+    "reorder_qty": 68,
+    "last_counted_at": "2025-05-01T12:00:00Z"
+  },
+  {
+    "id": 72,
+    "product_id": 72,
+    "warehouse": "W3-SAC",
+    "on_hand": 353,
+    "reserved": 41,
+    "reorder_point": 25,
+    "reorder_qty": 90,
+    "last_counted_at": "2025-01-11T12:00:00Z"
+  },
+  {
+    "id": 73,
+    "product_id": 73,
+    "warehouse": "W1-LA",
+    "on_hand": 380,
+    "reserved": 4,
+    "reorder_point": 80,
+    "reorder_qty": 45,
+    "last_counted_at": "2025-04-23T12:00:00Z"
+  },
+  {
+    "id": 74,
+    "product_id": 74,
+    "warehouse": "W4-SD",
+    "on_hand": 38,
+    "reserved": 31,
+    "reorder_point": 14,
+    "reorder_qty": 20,
+    "last_counted_at": "2025-01-09T12:00:00Z"
+  },
+  {
+    "id": 75,
+    "product_id": 75,
+    "warehouse": "W3-SAC",
+    "on_hand": 155,
+    "reserved": 46,
+    "reorder_point": 23,
+    "reorder_qty": 54,
+    "last_counted_at": "2025-04-22T12:00:00Z"
+  },
+  {
+    "id": 76,
+    "product_id": 76,
+    "warehouse": "W3-SAC",
+    "on_hand": 259,
+    "reserved": 6,
+    "reorder_point": 11,
+    "reorder_qty": 169,
+    "last_counted_at": "2025-05-22T12:00:00Z"
+  },
+  {
+    "id": 77,
+    "product_id": 77,
+    "warehouse": "W3-SAC",
+    "on_hand": 84,
+    "reserved": 20,
+    "reorder_point": 51,
+    "reorder_qty": 83,
+    "last_counted_at": "2025-07-05T12:00:00Z"
+  },
+  {
+    "id": 78,
+    "product_id": 78,
+    "warehouse": "W3-SAC",
+    "on_hand": 431,
+    "reserved": 23,
+    "reorder_point": 65,
+    "reorder_qty": 40,
+    "last_counted_at": "2025-05-09T12:00:00Z"
+  },
+  {
+    "id": 79,
+    "product_id": 79,
+    "warehouse": "W1-LA",
+    "on_hand": 479,
+    "reserved": 9,
+    "reorder_point": 79,
+    "reorder_qty": 134,
+    "last_counted_at": "2025-01-03T12:00:00Z"
+  },
+  {
+    "id": 80,
+    "product_id": 80,
+    "warehouse": "W1-LA",
+    "on_hand": 313,
+    "reserved": 12,
+    "reorder_point": 26,
+    "reorder_qty": 51,
+    "last_counted_at": "2025-06-05T12:00:00Z"
+  },
+  {
+    "id": 81,
+    "product_id": 81,
+    "warehouse": "W3-SAC",
+    "on_hand": 55,
+    "reserved": 31,
+    "reorder_point": 65,
+    "reorder_qty": 48,
+    "last_counted_at": "2025-02-04T12:00:00Z"
+  },
+  {
+    "id": 82,
+    "product_id": 82,
+    "warehouse": "W3-SAC",
+    "on_hand": 263,
+    "reserved": 14,
+    "reorder_point": 30,
+    "reorder_qty": 84,
+    "last_counted_at": "2025-01-20T12:00:00Z"
+  },
+  {
+    "id": 83,
+    "product_id": 83,
+    "warehouse": "W4-SD",
+    "on_hand": 383,
+    "reserved": 21,
+    "reorder_point": 27,
+    "reorder_qty": 193,
+    "last_counted_at": "2025-07-27T12:00:00Z"
+  },
+  {
+    "id": 84,
+    "product_id": 84,
+    "warehouse": "W1-LA",
+    "on_hand": 67,
+    "reserved": 7,
+    "reorder_point": 59,
+    "reorder_qty": 125,
+    "last_counted_at": "2025-05-17T12:00:00Z"
+  },
+  {
+    "id": 85,
+    "product_id": 85,
+    "warehouse": "W1-LA",
+    "on_hand": 469,
+    "reserved": 44,
+    "reorder_point": 17,
+    "reorder_qty": 20,
+    "last_counted_at": "2025-02-03T12:00:00Z"
+  },
+  {
+    "id": 86,
+    "product_id": 86,
+    "warehouse": "W2-SF",
+    "on_hand": 363,
+    "reserved": 13,
+    "reorder_point": 38,
+    "reorder_qty": 198,
+    "last_counted_at": "2025-01-04T12:00:00Z"
+  },
+  {
+    "id": 87,
+    "product_id": 87,
+    "warehouse": "W4-SD",
+    "on_hand": 232,
+    "reserved": 37,
+    "reorder_point": 58,
+    "reorder_qty": 106,
+    "last_counted_at": "2025-06-21T12:00:00Z"
+  },
+  {
+    "id": 88,
+    "product_id": 88,
+    "warehouse": "W4-SD",
+    "on_hand": 333,
+    "reserved": 29,
+    "reorder_point": 41,
+    "reorder_qty": 67,
+    "last_counted_at": "2025-04-18T12:00:00Z"
+  },
+  {
+    "id": 89,
+    "product_id": 89,
+    "warehouse": "W2-SF",
+    "on_hand": 198,
+    "reserved": 32,
+    "reorder_point": 49,
+    "reorder_qty": 45,
+    "last_counted_at": "2025-05-08T12:00:00Z"
+  },
+  {
+    "id": 90,
+    "product_id": 90,
+    "warehouse": "W3-SAC",
+    "on_hand": 144,
+    "reserved": 25,
+    "reorder_point": 31,
+    "reorder_qty": 64,
+    "last_counted_at": "2025-09-01T12:00:00Z"
+  },
+  {
+    "id": 91,
+    "product_id": 91,
+    "warehouse": "W4-SD",
+    "on_hand": 135,
+    "reserved": 42,
+    "reorder_point": 17,
+    "reorder_qty": 100,
+    "last_counted_at": "2025-04-17T12:00:00Z"
+  },
+  {
+    "id": 92,
+    "product_id": 92,
+    "warehouse": "W1-LA",
+    "on_hand": 175,
+    "reserved": 46,
+    "reorder_point": 57,
+    "reorder_qty": 21,
+    "last_counted_at": "2025-05-06T12:00:00Z"
+  },
+  {
+    "id": 93,
+    "product_id": 93,
+    "warehouse": "W1-LA",
+    "on_hand": 223,
+    "reserved": 34,
+    "reorder_point": 39,
+    "reorder_qty": 121,
+    "last_counted_at": "2025-03-11T12:00:00Z"
+  },
+  {
+    "id": 94,
+    "product_id": 94,
+    "warehouse": "W4-SD",
+    "on_hand": 251,
+    "reserved": 11,
+    "reorder_point": 20,
+    "reorder_qty": 26,
+    "last_counted_at": "2025-09-16T12:00:00Z"
+  },
+  {
+    "id": 95,
+    "product_id": 95,
+    "warehouse": "W2-SF",
+    "on_hand": 239,
+    "reserved": 18,
+    "reorder_point": 25,
+    "reorder_qty": 32,
+    "last_counted_at": "2025-06-19T12:00:00Z"
+  },
+  {
+    "id": 96,
+    "product_id": 96,
+    "warehouse": "W1-LA",
+    "on_hand": 469,
+    "reserved": 22,
+    "reorder_point": 68,
+    "reorder_qty": 166,
+    "last_counted_at": "2025-09-24T12:00:00Z"
+  },
+  {
+    "id": 97,
+    "product_id": 97,
+    "warehouse": "W1-LA",
+    "on_hand": 191,
+    "reserved": 21,
+    "reorder_point": 53,
+    "reorder_qty": 43,
+    "last_counted_at": "2025-09-10T12:00:00Z"
+  },
+  {
+    "id": 98,
+    "product_id": 98,
+    "warehouse": "W3-SAC",
+    "on_hand": 367,
+    "reserved": 50,
+    "reorder_point": 57,
+    "reorder_qty": 62,
+    "last_counted_at": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": 99,
+    "product_id": 99,
+    "warehouse": "W2-SF",
+    "on_hand": 320,
+    "reserved": 20,
+    "reorder_point": 27,
+    "reorder_qty": 55,
+    "last_counted_at": "2025-02-16T12:00:00Z"
+  },
+  {
+    "id": 100,
+    "product_id": 100,
+    "warehouse": "W2-SF",
+    "on_hand": 65,
+    "reserved": 35,
+    "reorder_point": 49,
+    "reorder_qty": 56,
+    "last_counted_at": "2025-05-25T12:00:00Z"
+  },
+  {
+    "id": 101,
+    "product_id": 101,
+    "warehouse": "W4-SD",
+    "on_hand": 474,
+    "reserved": 41,
+    "reorder_point": 31,
+    "reorder_qty": 165,
+    "last_counted_at": "2025-09-02T12:00:00Z"
+  },
+  {
+    "id": 102,
+    "product_id": 102,
+    "warehouse": "W2-SF",
+    "on_hand": 11,
+    "reserved": 9,
+    "reorder_point": 19,
+    "reorder_qty": 184,
+    "last_counted_at": "2025-08-06T12:00:00Z"
+  },
+  {
+    "id": 103,
+    "product_id": 103,
+    "warehouse": "W4-SD",
+    "on_hand": 160,
+    "reserved": 49,
+    "reorder_point": 23,
+    "reorder_qty": 187,
+    "last_counted_at": "2025-04-24T12:00:00Z"
+  },
+  {
+    "id": 104,
+    "product_id": 104,
+    "warehouse": "W3-SAC",
+    "on_hand": 74,
+    "reserved": 2,
+    "reorder_point": 49,
+    "reorder_qty": 180,
+    "last_counted_at": "2025-06-27T12:00:00Z"
+  },
+  {
+    "id": 105,
+    "product_id": 105,
+    "warehouse": "W4-SD",
+    "on_hand": 264,
+    "reserved": 48,
+    "reorder_point": 24,
+    "reorder_qty": 82,
+    "last_counted_at": "2025-02-10T12:00:00Z"
+  },
+  {
+    "id": 106,
+    "product_id": 106,
+    "warehouse": "W3-SAC",
+    "on_hand": 490,
+    "reserved": 48,
+    "reorder_point": 58,
+    "reorder_qty": 55,
+    "last_counted_at": "2025-06-08T12:00:00Z"
+  },
+  {
+    "id": 107,
+    "product_id": 107,
+    "warehouse": "W1-LA",
+    "on_hand": 111,
+    "reserved": 3,
+    "reorder_point": 27,
+    "reorder_qty": 91,
+    "last_counted_at": "2025-02-08T12:00:00Z"
+  },
+  {
+    "id": 108,
+    "product_id": 108,
+    "warehouse": "W1-LA",
+    "on_hand": 7,
+    "reserved": 7,
+    "reorder_point": 24,
+    "reorder_qty": 73,
+    "last_counted_at": "2025-02-10T12:00:00Z"
+  },
+  {
+    "id": 109,
+    "product_id": 109,
+    "warehouse": "W4-SD",
+    "on_hand": 154,
+    "reserved": 19,
+    "reorder_point": 33,
+    "reorder_qty": 41,
+    "last_counted_at": "2025-05-08T12:00:00Z"
+  },
+  {
+    "id": 110,
+    "product_id": 110,
+    "warehouse": "W4-SD",
+    "on_hand": 328,
+    "reserved": 30,
+    "reorder_point": 74,
+    "reorder_qty": 193,
+    "last_counted_at": "2025-01-28T12:00:00Z"
+  },
+  {
+    "id": 111,
+    "product_id": 111,
+    "warehouse": "W3-SAC",
+    "on_hand": 171,
+    "reserved": 42,
+    "reorder_point": 27,
+    "reorder_qty": 54,
+    "last_counted_at": "2025-08-16T12:00:00Z"
+  },
+  {
+    "id": 112,
+    "product_id": 112,
+    "warehouse": "W1-LA",
+    "on_hand": 482,
+    "reserved": 42,
+    "reorder_point": 26,
+    "reorder_qty": 129,
+    "last_counted_at": "2025-01-24T12:00:00Z"
+  },
+  {
+    "id": 113,
+    "product_id": 113,
+    "warehouse": "W3-SAC",
+    "on_hand": 288,
+    "reserved": 29,
+    "reorder_point": 61,
+    "reorder_qty": 179,
+    "last_counted_at": "2025-08-20T12:00:00Z"
+  },
+  {
+    "id": 114,
+    "product_id": 114,
+    "warehouse": "W4-SD",
+    "on_hand": 356,
+    "reserved": 11,
+    "reorder_point": 54,
+    "reorder_qty": 123,
+    "last_counted_at": "2025-07-21T12:00:00Z"
+  },
+  {
+    "id": 115,
+    "product_id": 115,
+    "warehouse": "W3-SAC",
+    "on_hand": 39,
+    "reserved": 4,
+    "reorder_point": 37,
+    "reorder_qty": 109,
+    "last_counted_at": "2025-01-28T12:00:00Z"
+  },
+  {
+    "id": 116,
+    "product_id": 116,
+    "warehouse": "W4-SD",
+    "on_hand": 353,
+    "reserved": 27,
+    "reorder_point": 47,
+    "reorder_qty": 178,
+    "last_counted_at": "2025-07-15T12:00:00Z"
+  },
+  {
+    "id": 117,
+    "product_id": 117,
+    "warehouse": "W2-SF",
+    "on_hand": 358,
+    "reserved": 28,
+    "reorder_point": 61,
+    "reorder_qty": 68,
+    "last_counted_at": "2025-04-19T12:00:00Z"
+  },
+  {
+    "id": 118,
+    "product_id": 118,
+    "warehouse": "W4-SD",
+    "on_hand": 259,
+    "reserved": 1,
+    "reorder_point": 15,
+    "reorder_qty": 133,
+    "last_counted_at": "2025-02-04T12:00:00Z"
+  },
+  {
+    "id": 119,
+    "product_id": 119,
+    "warehouse": "W3-SAC",
+    "on_hand": 255,
+    "reserved": 20,
+    "reorder_point": 16,
+    "reorder_qty": 188,
+    "last_counted_at": "2025-06-21T12:00:00Z"
+  },
+  {
+    "id": 120,
+    "product_id": 120,
+    "warehouse": "W2-SF",
+    "on_hand": 65,
+    "reserved": 2,
+    "reorder_point": 22,
+    "reorder_qty": 36,
+    "last_counted_at": "2025-03-27T12:00:00Z"
+  },
+  {
+    "id": 121,
+    "product_id": 121,
+    "warehouse": "W4-SD",
+    "on_hand": 417,
+    "reserved": 0,
+    "reorder_point": 46,
+    "reorder_qty": 56,
+    "last_counted_at": "2025-03-23T12:00:00Z"
+  },
+  {
+    "id": 122,
+    "product_id": 122,
+    "warehouse": "W3-SAC",
+    "on_hand": 477,
+    "reserved": 36,
+    "reorder_point": 38,
+    "reorder_qty": 80,
+    "last_counted_at": "2025-03-07T12:00:00Z"
+  },
+  {
+    "id": 123,
+    "product_id": 123,
+    "warehouse": "W1-LA",
+    "on_hand": 413,
+    "reserved": 19,
+    "reorder_point": 39,
+    "reorder_qty": 74,
+    "last_counted_at": "2025-02-14T12:00:00Z"
+  },
+  {
+    "id": 124,
+    "product_id": 124,
+    "warehouse": "W1-LA",
+    "on_hand": 220,
+    "reserved": 25,
+    "reorder_point": 70,
+    "reorder_qty": 98,
+    "last_counted_at": "2025-05-14T12:00:00Z"
+  },
+  {
+    "id": 125,
+    "product_id": 125,
+    "warehouse": "W4-SD",
+    "on_hand": 20,
+    "reserved": 31,
+    "reorder_point": 24,
+    "reorder_qty": 48,
+    "last_counted_at": "2025-09-26T12:00:00Z"
+  },
+  {
+    "id": 126,
+    "product_id": 126,
+    "warehouse": "W3-SAC",
+    "on_hand": 459,
+    "reserved": 4,
+    "reorder_point": 24,
+    "reorder_qty": 50,
+    "last_counted_at": "2025-06-16T12:00:00Z"
+  },
+  {
+    "id": 127,
+    "product_id": 127,
+    "warehouse": "W4-SD",
+    "on_hand": 65,
+    "reserved": 15,
+    "reorder_point": 17,
+    "reorder_qty": 70,
+    "last_counted_at": "2025-08-04T12:00:00Z"
+  },
+  {
+    "id": 128,
+    "product_id": 128,
+    "warehouse": "W3-SAC",
+    "on_hand": 331,
+    "reserved": 23,
+    "reorder_point": 76,
+    "reorder_qty": 122,
+    "last_counted_at": "2025-01-06T12:00:00Z"
+  },
+  {
+    "id": 129,
+    "product_id": 129,
+    "warehouse": "W4-SD",
+    "on_hand": 154,
+    "reserved": 8,
+    "reorder_point": 36,
+    "reorder_qty": 123,
+    "last_counted_at": "2025-03-24T12:00:00Z"
+  },
+  {
+    "id": 130,
+    "product_id": 130,
+    "warehouse": "W3-SAC",
+    "on_hand": 173,
+    "reserved": 32,
+    "reorder_point": 78,
+    "reorder_qty": 93,
+    "last_counted_at": "2025-07-24T12:00:00Z"
+  },
+  {
+    "id": 131,
+    "product_id": 131,
+    "warehouse": "W2-SF",
+    "on_hand": 228,
+    "reserved": 4,
+    "reorder_point": 45,
+    "reorder_qty": 138,
+    "last_counted_at": "2025-09-16T12:00:00Z"
+  },
+  {
+    "id": 132,
+    "product_id": 132,
+    "warehouse": "W3-SAC",
+    "on_hand": 442,
+    "reserved": 1,
+    "reorder_point": 76,
+    "reorder_qty": 191,
+    "last_counted_at": "2025-01-12T12:00:00Z"
+  },
+  {
+    "id": 133,
+    "product_id": 133,
+    "warehouse": "W4-SD",
+    "on_hand": 321,
+    "reserved": 4,
+    "reorder_point": 18,
+    "reorder_qty": 147,
+    "last_counted_at": "2025-09-09T12:00:00Z"
+  },
+  {
+    "id": 134,
+    "product_id": 134,
+    "warehouse": "W3-SAC",
+    "on_hand": 142,
+    "reserved": 3,
+    "reorder_point": 17,
+    "reorder_qty": 59,
+    "last_counted_at": "2025-08-27T12:00:00Z"
+  },
+  {
+    "id": 135,
+    "product_id": 135,
+    "warehouse": "W3-SAC",
+    "on_hand": 396,
+    "reserved": 32,
+    "reorder_point": 42,
+    "reorder_qty": 63,
+    "last_counted_at": "2025-05-10T12:00:00Z"
+  },
+  {
+    "id": 136,
+    "product_id": 136,
+    "warehouse": "W2-SF",
+    "on_hand": 226,
+    "reserved": 38,
+    "reorder_point": 36,
+    "reorder_qty": 123,
+    "last_counted_at": "2025-07-14T12:00:00Z"
+  },
+  {
+    "id": 137,
+    "product_id": 137,
+    "warehouse": "W1-LA",
+    "on_hand": 146,
+    "reserved": 19,
+    "reorder_point": 78,
+    "reorder_qty": 121,
+    "last_counted_at": "2025-08-04T12:00:00Z"
+  },
+  {
+    "id": 138,
+    "product_id": 138,
+    "warehouse": "W1-LA",
+    "on_hand": 275,
+    "reserved": 33,
+    "reorder_point": 19,
+    "reorder_qty": 124,
+    "last_counted_at": "2025-02-17T12:00:00Z"
+  },
+  {
+    "id": 139,
+    "product_id": 139,
+    "warehouse": "W2-SF",
+    "on_hand": 378,
+    "reserved": 31,
+    "reorder_point": 66,
+    "reorder_qty": 185,
+    "last_counted_at": "2025-04-10T12:00:00Z"
+  },
+  {
+    "id": 140,
+    "product_id": 140,
+    "warehouse": "W4-SD",
+    "on_hand": 237,
+    "reserved": 18,
+    "reorder_point": 63,
+    "reorder_qty": 132,
+    "last_counted_at": "2025-09-24T12:00:00Z"
+  },
+  {
+    "id": 141,
+    "product_id": 141,
+    "warehouse": "W3-SAC",
+    "on_hand": 191,
+    "reserved": 44,
+    "reorder_point": 26,
+    "reorder_qty": 138,
+    "last_counted_at": "2025-04-23T12:00:00Z"
+  },
+  {
+    "id": 142,
+    "product_id": 142,
+    "warehouse": "W2-SF",
+    "on_hand": 328,
+    "reserved": 40,
+    "reorder_point": 23,
+    "reorder_qty": 183,
+    "last_counted_at": "2025-09-27T12:00:00Z"
+  },
+  {
+    "id": 143,
+    "product_id": 143,
+    "warehouse": "W1-LA",
+    "on_hand": 162,
+    "reserved": 26,
+    "reorder_point": 73,
+    "reorder_qty": 103,
+    "last_counted_at": "2025-05-04T12:00:00Z"
+  },
+  {
+    "id": 144,
+    "product_id": 144,
+    "warehouse": "W2-SF",
+    "on_hand": 405,
+    "reserved": 21,
+    "reorder_point": 45,
+    "reorder_qty": 180,
+    "last_counted_at": "2025-06-11T12:00:00Z"
+  },
+  {
+    "id": 145,
+    "product_id": 145,
+    "warehouse": "W4-SD",
+    "on_hand": 305,
+    "reserved": 29,
+    "reorder_point": 13,
+    "reorder_qty": 137,
+    "last_counted_at": "2025-01-16T12:00:00Z"
+  },
+  {
+    "id": 146,
+    "product_id": 146,
+    "warehouse": "W4-SD",
+    "on_hand": 328,
+    "reserved": 3,
+    "reorder_point": 49,
+    "reorder_qty": 181,
+    "last_counted_at": "2025-06-11T12:00:00Z"
+  },
+  {
+    "id": 147,
+    "product_id": 147,
+    "warehouse": "W2-SF",
+    "on_hand": 13,
+    "reserved": 1,
+    "reorder_point": 19,
+    "reorder_qty": 144,
+    "last_counted_at": "2025-04-04T12:00:00Z"
+  },
+  {
+    "id": 148,
+    "product_id": 148,
+    "warehouse": "W3-SAC",
+    "on_hand": 53,
+    "reserved": 9,
+    "reorder_point": 70,
+    "reorder_qty": 64,
+    "last_counted_at": "2025-06-19T12:00:00Z"
+  },
+  {
+    "id": 149,
+    "product_id": 149,
+    "warehouse": "W2-SF",
+    "on_hand": 55,
+    "reserved": 40,
+    "reorder_point": 33,
+    "reorder_qty": 167,
+    "last_counted_at": "2025-09-12T12:00:00Z"
+  },
+  {
+    "id": 150,
+    "product_id": 150,
+    "warehouse": "W4-SD",
+    "on_hand": 229,
+    "reserved": 44,
+    "reorder_point": 26,
+    "reorder_qty": 86,
+    "last_counted_at": "2025-01-12T12:00:00Z"
+  },
+  {
+    "id": 151,
+    "product_id": 151,
+    "warehouse": "W3-SAC",
+    "on_hand": 175,
+    "reserved": 50,
+    "reorder_point": 30,
+    "reorder_qty": 103,
+    "last_counted_at": "2025-02-16T12:00:00Z"
+  },
+  {
+    "id": 152,
+    "product_id": 152,
+    "warehouse": "W4-SD",
+    "on_hand": 147,
+    "reserved": 40,
+    "reorder_point": 78,
+    "reorder_qty": 110,
+    "last_counted_at": "2025-07-11T12:00:00Z"
+  },
+  {
+    "id": 153,
+    "product_id": 153,
+    "warehouse": "W2-SF",
+    "on_hand": 472,
+    "reserved": 41,
+    "reorder_point": 61,
+    "reorder_qty": 98,
+    "last_counted_at": "2025-03-25T12:00:00Z"
+  },
+  {
+    "id": 154,
+    "product_id": 154,
+    "warehouse": "W3-SAC",
+    "on_hand": 110,
+    "reserved": 28,
+    "reorder_point": 49,
+    "reorder_qty": 59,
+    "last_counted_at": "2025-09-24T12:00:00Z"
+  },
+  {
+    "id": 155,
+    "product_id": 155,
+    "warehouse": "W2-SF",
+    "on_hand": 400,
+    "reserved": 9,
+    "reorder_point": 13,
+    "reorder_qty": 67,
+    "last_counted_at": "2025-03-02T12:00:00Z"
+  },
+  {
+    "id": 156,
+    "product_id": 156,
+    "warehouse": "W3-SAC",
+    "on_hand": 37,
+    "reserved": 0,
+    "reorder_point": 63,
+    "reorder_qty": 94,
+    "last_counted_at": "2025-07-02T12:00:00Z"
+  },
+  {
+    "id": 157,
+    "product_id": 157,
+    "warehouse": "W4-SD",
+    "on_hand": 82,
+    "reserved": 24,
+    "reorder_point": 53,
+    "reorder_qty": 60,
+    "last_counted_at": "2025-01-27T12:00:00Z"
+  },
+  {
+    "id": 158,
+    "product_id": 158,
+    "warehouse": "W1-LA",
+    "on_hand": 370,
+    "reserved": 17,
+    "reorder_point": 75,
+    "reorder_qty": 138,
+    "last_counted_at": "2025-07-02T12:00:00Z"
+  },
+  {
+    "id": 159,
+    "product_id": 159,
+    "warehouse": "W4-SD",
+    "on_hand": 231,
+    "reserved": 14,
+    "reorder_point": 66,
+    "reorder_qty": 63,
+    "last_counted_at": "2025-06-02T12:00:00Z"
+  },
+  {
+    "id": 160,
+    "product_id": 160,
+    "warehouse": "W1-LA",
+    "on_hand": 293,
+    "reserved": 15,
+    "reorder_point": 30,
+    "reorder_qty": 50,
+    "last_counted_at": "2025-06-13T12:00:00Z"
+  },
+  {
+    "id": 161,
+    "product_id": 161,
+    "warehouse": "W2-SF",
+    "on_hand": 404,
+    "reserved": 11,
+    "reorder_point": 17,
+    "reorder_qty": 115,
+    "last_counted_at": "2025-01-14T12:00:00Z"
+  },
+  {
+    "id": 162,
+    "product_id": 162,
+    "warehouse": "W3-SAC",
+    "on_hand": 21,
+    "reserved": 25,
+    "reorder_point": 59,
+    "reorder_qty": 180,
+    "last_counted_at": "2025-02-22T12:00:00Z"
+  },
+  {
+    "id": 163,
+    "product_id": 163,
+    "warehouse": "W3-SAC",
+    "on_hand": 468,
+    "reserved": 34,
+    "reorder_point": 76,
+    "reorder_qty": 84,
+    "last_counted_at": "2025-05-22T12:00:00Z"
+  },
+  {
+    "id": 164,
+    "product_id": 164,
+    "warehouse": "W3-SAC",
+    "on_hand": 64,
+    "reserved": 13,
+    "reorder_point": 60,
+    "reorder_qty": 84,
+    "last_counted_at": "2025-05-03T12:00:00Z"
+  },
+  {
+    "id": 165,
+    "product_id": 165,
+    "warehouse": "W1-LA",
+    "on_hand": 463,
+    "reserved": 47,
+    "reorder_point": 13,
+    "reorder_qty": 28,
+    "last_counted_at": "2025-03-02T12:00:00Z"
+  },
+  {
+    "id": 166,
+    "product_id": 166,
+    "warehouse": "W4-SD",
+    "on_hand": 251,
+    "reserved": 25,
+    "reorder_point": 14,
+    "reorder_qty": 96,
+    "last_counted_at": "2025-01-26T12:00:00Z"
+  },
+  {
+    "id": 167,
+    "product_id": 167,
+    "warehouse": "W4-SD",
+    "on_hand": 73,
+    "reserved": 15,
+    "reorder_point": 33,
+    "reorder_qty": 44,
+    "last_counted_at": "2025-06-04T12:00:00Z"
+  },
+  {
+    "id": 168,
+    "product_id": 168,
+    "warehouse": "W4-SD",
+    "on_hand": 161,
+    "reserved": 7,
+    "reorder_point": 58,
+    "reorder_qty": 141,
+    "last_counted_at": "2025-03-19T12:00:00Z"
+  },
+  {
+    "id": 169,
+    "product_id": 169,
+    "warehouse": "W4-SD",
+    "on_hand": 14,
+    "reserved": 21,
+    "reorder_point": 76,
+    "reorder_qty": 130,
+    "last_counted_at": "2025-06-08T12:00:00Z"
+  },
+  {
+    "id": 170,
+    "product_id": 170,
+    "warehouse": "W1-LA",
+    "on_hand": 486,
+    "reserved": 17,
+    "reorder_point": 37,
+    "reorder_qty": 89,
+    "last_counted_at": "2025-03-06T12:00:00Z"
+  },
+  {
+    "id": 171,
+    "product_id": 171,
+    "warehouse": "W1-LA",
+    "on_hand": 253,
+    "reserved": 2,
+    "reorder_point": 46,
+    "reorder_qty": 75,
+    "last_counted_at": "2025-02-26T12:00:00Z"
+  },
+  {
+    "id": 172,
+    "product_id": 172,
+    "warehouse": "W1-LA",
+    "on_hand": 477,
+    "reserved": 29,
+    "reorder_point": 68,
+    "reorder_qty": 63,
+    "last_counted_at": "2025-03-05T12:00:00Z"
+  },
+  {
+    "id": 173,
+    "product_id": 173,
+    "warehouse": "W4-SD",
+    "on_hand": 129,
+    "reserved": 39,
+    "reorder_point": 52,
+    "reorder_qty": 149,
+    "last_counted_at": "2025-04-24T12:00:00Z"
+  },
+  {
+    "id": 174,
+    "product_id": 174,
+    "warehouse": "W4-SD",
+    "on_hand": 249,
+    "reserved": 18,
+    "reorder_point": 31,
+    "reorder_qty": 158,
+    "last_counted_at": "2025-07-02T12:00:00Z"
+  },
+  {
+    "id": 175,
+    "product_id": 175,
+    "warehouse": "W1-LA",
+    "on_hand": 248,
+    "reserved": 49,
+    "reorder_point": 60,
+    "reorder_qty": 196,
+    "last_counted_at": "2025-08-22T12:00:00Z"
+  },
+  {
+    "id": 176,
+    "product_id": 176,
+    "warehouse": "W4-SD",
+    "on_hand": 489,
+    "reserved": 13,
+    "reorder_point": 74,
+    "reorder_qty": 152,
+    "last_counted_at": "2025-01-04T12:00:00Z"
+  },
+  {
+    "id": 177,
+    "product_id": 177,
+    "warehouse": "W1-LA",
+    "on_hand": 32,
+    "reserved": 13,
+    "reorder_point": 14,
+    "reorder_qty": 187,
+    "last_counted_at": "2025-06-06T12:00:00Z"
+  },
+  {
+    "id": 178,
+    "product_id": 178,
+    "warehouse": "W2-SF",
+    "on_hand": 483,
+    "reserved": 13,
+    "reorder_point": 77,
+    "reorder_qty": 76,
+    "last_counted_at": "2025-06-06T12:00:00Z"
+  },
+  {
+    "id": 179,
+    "product_id": 179,
+    "warehouse": "W2-SF",
+    "on_hand": 107,
+    "reserved": 29,
+    "reorder_point": 73,
+    "reorder_qty": 105,
+    "last_counted_at": "2025-01-09T12:00:00Z"
+  },
+  {
+    "id": 180,
+    "product_id": 180,
+    "warehouse": "W3-SAC",
+    "on_hand": 407,
+    "reserved": 33,
+    "reorder_point": 13,
+    "reorder_qty": 121,
+    "last_counted_at": "2025-04-21T12:00:00Z"
+  },
+  {
+    "id": 181,
+    "product_id": 181,
+    "warehouse": "W2-SF",
+    "on_hand": 135,
+    "reserved": 17,
+    "reorder_point": 80,
+    "reorder_qty": 194,
+    "last_counted_at": "2025-07-18T12:00:00Z"
+  },
+  {
+    "id": 182,
+    "product_id": 182,
+    "warehouse": "W3-SAC",
+    "on_hand": 209,
+    "reserved": 2,
+    "reorder_point": 45,
+    "reorder_qty": 48,
+    "last_counted_at": "2025-03-14T12:00:00Z"
+  },
+  {
+    "id": 183,
+    "product_id": 183,
+    "warehouse": "W1-LA",
+    "on_hand": 202,
+    "reserved": 46,
+    "reorder_point": 56,
+    "reorder_qty": 103,
+    "last_counted_at": "2025-05-05T12:00:00Z"
+  },
+  {
+    "id": 184,
+    "product_id": 184,
+    "warehouse": "W4-SD",
+    "on_hand": 299,
+    "reserved": 15,
+    "reorder_point": 35,
+    "reorder_qty": 188,
+    "last_counted_at": "2025-08-02T12:00:00Z"
+  },
+  {
+    "id": 185,
+    "product_id": 185,
+    "warehouse": "W2-SF",
+    "on_hand": 61,
+    "reserved": 19,
+    "reorder_point": 58,
+    "reorder_qty": 39,
+    "last_counted_at": "2025-07-20T12:00:00Z"
+  },
+  {
+    "id": 186,
+    "product_id": 186,
+    "warehouse": "W1-LA",
+    "on_hand": 159,
+    "reserved": 30,
+    "reorder_point": 58,
+    "reorder_qty": 38,
+    "last_counted_at": "2025-01-05T12:00:00Z"
+  },
+  {
+    "id": 187,
+    "product_id": 187,
+    "warehouse": "W4-SD",
+    "on_hand": 338,
+    "reserved": 48,
+    "reorder_point": 56,
+    "reorder_qty": 87,
+    "last_counted_at": "2025-05-03T12:00:00Z"
+  },
+  {
+    "id": 188,
+    "product_id": 188,
+    "warehouse": "W1-LA",
+    "on_hand": 387,
+    "reserved": 50,
+    "reorder_point": 43,
+    "reorder_qty": 70,
+    "last_counted_at": "2025-08-15T12:00:00Z"
+  },
+  {
+    "id": 189,
+    "product_id": 189,
+    "warehouse": "W1-LA",
+    "on_hand": 85,
+    "reserved": 39,
+    "reorder_point": 63,
+    "reorder_qty": 137,
+    "last_counted_at": "2025-01-11T12:00:00Z"
+  },
+  {
+    "id": 190,
+    "product_id": 190,
+    "warehouse": "W1-LA",
+    "on_hand": 105,
+    "reserved": 20,
+    "reorder_point": 62,
+    "reorder_qty": 63,
+    "last_counted_at": "2025-04-15T12:00:00Z"
+  },
+  {
+    "id": 191,
+    "product_id": 191,
+    "warehouse": "W2-SF",
+    "on_hand": 385,
+    "reserved": 17,
+    "reorder_point": 60,
+    "reorder_qty": 190,
+    "last_counted_at": "2025-05-25T12:00:00Z"
+  },
+  {
+    "id": 192,
+    "product_id": 192,
+    "warehouse": "W3-SAC",
+    "on_hand": 413,
+    "reserved": 25,
+    "reorder_point": 11,
+    "reorder_qty": 95,
+    "last_counted_at": "2025-09-25T12:00:00Z"
+  },
+  {
+    "id": 193,
+    "product_id": 193,
+    "warehouse": "W3-SAC",
+    "on_hand": 446,
+    "reserved": 5,
+    "reorder_point": 20,
+    "reorder_qty": 169,
+    "last_counted_at": "2025-01-13T12:00:00Z"
+  },
+  {
+    "id": 194,
+    "product_id": 194,
+    "warehouse": "W3-SAC",
+    "on_hand": 385,
+    "reserved": 25,
+    "reorder_point": 40,
+    "reorder_qty": 65,
+    "last_counted_at": "2025-03-22T12:00:00Z"
+  },
+  {
+    "id": 195,
+    "product_id": 195,
+    "warehouse": "W4-SD",
+    "on_hand": 248,
+    "reserved": 38,
+    "reorder_point": 19,
+    "reorder_qty": 49,
+    "last_counted_at": "2025-02-27T12:00:00Z"
+  },
+  {
+    "id": 196,
+    "product_id": 196,
+    "warehouse": "W4-SD",
+    "on_hand": 260,
+    "reserved": 21,
+    "reorder_point": 24,
+    "reorder_qty": 66,
+    "last_counted_at": "2025-06-20T12:00:00Z"
+  },
+  {
+    "id": 197,
+    "product_id": 197,
+    "warehouse": "W2-SF",
+    "on_hand": 348,
+    "reserved": 29,
+    "reorder_point": 32,
+    "reorder_qty": 168,
+    "last_counted_at": "2025-02-13T12:00:00Z"
+  },
+  {
+    "id": 198,
+    "product_id": 198,
+    "warehouse": "W3-SAC",
+    "on_hand": 483,
+    "reserved": 8,
+    "reorder_point": 28,
+    "reorder_qty": 53,
+    "last_counted_at": "2025-03-12T12:00:00Z"
+  },
+  {
+    "id": 199,
+    "product_id": 199,
+    "warehouse": "W2-SF",
+    "on_hand": 279,
+    "reserved": 16,
+    "reorder_point": 19,
+    "reorder_qty": 161,
+    "last_counted_at": "2025-08-11T12:00:00Z"
+  },
+  {
+    "id": 200,
+    "product_id": 200,
+    "warehouse": "W4-SD",
+    "on_hand": 494,
+    "reserved": 24,
+    "reorder_point": 21,
+    "reorder_qty": 145,
+    "last_counted_at": "2025-07-12T12:00:00Z"
+  },
+  {
+    "id": 201,
+    "product_id": 201,
+    "warehouse": "W4-SD",
+    "on_hand": 82,
+    "reserved": 10,
+    "reorder_point": 43,
+    "reorder_qty": 113,
+    "last_counted_at": "2025-09-27T12:00:00Z"
+  },
+  {
+    "id": 202,
+    "product_id": 202,
+    "warehouse": "W2-SF",
+    "on_hand": 223,
+    "reserved": 27,
+    "reorder_point": 11,
+    "reorder_qty": 147,
+    "last_counted_at": "2025-09-07T12:00:00Z"
+  },
+  {
+    "id": 203,
+    "product_id": 203,
+    "warehouse": "W2-SF",
+    "on_hand": 339,
+    "reserved": 18,
+    "reorder_point": 16,
+    "reorder_qty": 151,
+    "last_counted_at": "2025-04-24T12:00:00Z"
+  },
+  {
+    "id": 204,
+    "product_id": 204,
+    "warehouse": "W2-SF",
+    "on_hand": 241,
+    "reserved": 32,
+    "reorder_point": 37,
+    "reorder_qty": 120,
+    "last_counted_at": "2025-02-12T12:00:00Z"
+  },
+  {
+    "id": 205,
+    "product_id": 205,
+    "warehouse": "W2-SF",
+    "on_hand": 436,
+    "reserved": 24,
+    "reorder_point": 63,
+    "reorder_qty": 153,
+    "last_counted_at": "2025-07-13T12:00:00Z"
+  },
+  {
+    "id": 206,
+    "product_id": 206,
+    "warehouse": "W1-LA",
+    "on_hand": 277,
+    "reserved": 1,
+    "reorder_point": 71,
+    "reorder_qty": 170,
+    "last_counted_at": "2025-06-14T12:00:00Z"
+  },
+  {
+    "id": 207,
+    "product_id": 207,
+    "warehouse": "W3-SAC",
+    "on_hand": 122,
+    "reserved": 3,
+    "reorder_point": 13,
+    "reorder_qty": 32,
+    "last_counted_at": "2025-03-26T12:00:00Z"
+  },
+  {
+    "id": 208,
+    "product_id": 208,
+    "warehouse": "W2-SF",
+    "on_hand": 248,
+    "reserved": 23,
+    "reorder_point": 11,
+    "reorder_qty": 177,
+    "last_counted_at": "2025-04-23T12:00:00Z"
+  },
+  {
+    "id": 209,
+    "product_id": 209,
+    "warehouse": "W4-SD",
+    "on_hand": 337,
+    "reserved": 1,
+    "reorder_point": 45,
+    "reorder_qty": 140,
+    "last_counted_at": "2025-01-20T12:00:00Z"
+  },
+  {
+    "id": 210,
+    "product_id": 210,
+    "warehouse": "W2-SF",
+    "on_hand": 286,
+    "reserved": 2,
+    "reorder_point": 40,
+    "reorder_qty": 76,
+    "last_counted_at": "2025-08-26T12:00:00Z"
+  },
+  {
+    "id": 211,
+    "product_id": 211,
+    "warehouse": "W1-LA",
+    "on_hand": 135,
+    "reserved": 9,
+    "reorder_point": 24,
+    "reorder_qty": 75,
+    "last_counted_at": "2025-08-10T12:00:00Z"
+  },
+  {
+    "id": 212,
+    "product_id": 212,
+    "warehouse": "W4-SD",
+    "on_hand": 421,
+    "reserved": 11,
+    "reorder_point": 73,
+    "reorder_qty": 165,
+    "last_counted_at": "2025-04-19T12:00:00Z"
+  },
+  {
+    "id": 213,
+    "product_id": 213,
+    "warehouse": "W2-SF",
+    "on_hand": 323,
+    "reserved": 9,
+    "reorder_point": 62,
+    "reorder_qty": 200,
+    "last_counted_at": "2025-09-20T12:00:00Z"
+  },
+  {
+    "id": 214,
+    "product_id": 214,
+    "warehouse": "W3-SAC",
+    "on_hand": 447,
+    "reserved": 36,
+    "reorder_point": 51,
+    "reorder_qty": 86,
+    "last_counted_at": "2025-03-16T12:00:00Z"
+  },
+  {
+    "id": 215,
+    "product_id": 215,
+    "warehouse": "W4-SD",
+    "on_hand": 379,
+    "reserved": 8,
+    "reorder_point": 41,
+    "reorder_qty": 83,
+    "last_counted_at": "2025-07-24T12:00:00Z"
+  },
+  {
+    "id": 216,
+    "product_id": 216,
+    "warehouse": "W2-SF",
+    "on_hand": 72,
+    "reserved": 48,
+    "reorder_point": 49,
+    "reorder_qty": 27,
+    "last_counted_at": "2025-08-06T12:00:00Z"
+  },
+  {
+    "id": 217,
+    "product_id": 217,
+    "warehouse": "W1-LA",
+    "on_hand": 400,
+    "reserved": 39,
+    "reorder_point": 54,
+    "reorder_qty": 176,
+    "last_counted_at": "2025-09-04T12:00:00Z"
+  },
+  {
+    "id": 218,
+    "product_id": 218,
+    "warehouse": "W4-SD",
+    "on_hand": 471,
+    "reserved": 4,
+    "reorder_point": 74,
+    "reorder_qty": 26,
+    "last_counted_at": "2025-09-27T12:00:00Z"
+  },
+  {
+    "id": 219,
+    "product_id": 219,
+    "warehouse": "W1-LA",
+    "on_hand": 307,
+    "reserved": 34,
+    "reorder_point": 17,
+    "reorder_qty": 87,
+    "last_counted_at": "2025-01-20T12:00:00Z"
+  },
+  {
+    "id": 220,
+    "product_id": 220,
+    "warehouse": "W2-SF",
+    "on_hand": 118,
+    "reserved": 25,
+    "reorder_point": 32,
+    "reorder_qty": 132,
+    "last_counted_at": "2025-03-09T12:00:00Z"
+  },
+  {
+    "id": 221,
+    "product_id": 221,
+    "warehouse": "W3-SAC",
+    "on_hand": 168,
+    "reserved": 8,
+    "reorder_point": 33,
+    "reorder_qty": 143,
+    "last_counted_at": "2025-06-20T12:00:00Z"
+  },
+  {
+    "id": 222,
+    "product_id": 222,
+    "warehouse": "W3-SAC",
+    "on_hand": 69,
+    "reserved": 24,
+    "reorder_point": 72,
+    "reorder_qty": 79,
+    "last_counted_at": "2025-03-23T12:00:00Z"
+  },
+  {
+    "id": 223,
+    "product_id": 223,
+    "warehouse": "W4-SD",
+    "on_hand": 91,
+    "reserved": 11,
+    "reorder_point": 28,
+    "reorder_qty": 46,
+    "last_counted_at": "2025-06-12T12:00:00Z"
+  },
+  {
+    "id": 224,
+    "product_id": 224,
+    "warehouse": "W2-SF",
+    "on_hand": 74,
+    "reserved": 20,
+    "reorder_point": 16,
+    "reorder_qty": 44,
+    "last_counted_at": "2025-07-20T12:00:00Z"
+  },
+  {
+    "id": 225,
+    "product_id": 225,
+    "warehouse": "W2-SF",
+    "on_hand": 397,
+    "reserved": 11,
+    "reorder_point": 66,
+    "reorder_qty": 84,
+    "last_counted_at": "2025-06-04T12:00:00Z"
+  },
+  {
+    "id": 226,
+    "product_id": 226,
+    "warehouse": "W1-LA",
+    "on_hand": 360,
+    "reserved": 42,
+    "reorder_point": 60,
+    "reorder_qty": 106,
+    "last_counted_at": "2025-02-14T12:00:00Z"
+  },
+  {
+    "id": 227,
+    "product_id": 227,
+    "warehouse": "W1-LA",
+    "on_hand": 279,
+    "reserved": 25,
+    "reorder_point": 32,
+    "reorder_qty": 95,
+    "last_counted_at": "2025-06-04T12:00:00Z"
+  },
+  {
+    "id": 228,
+    "product_id": 228,
+    "warehouse": "W2-SF",
+    "on_hand": 102,
+    "reserved": 37,
+    "reorder_point": 64,
+    "reorder_qty": 129,
+    "last_counted_at": "2025-01-24T12:00:00Z"
+  },
+  {
+    "id": 229,
+    "product_id": 229,
+    "warehouse": "W3-SAC",
+    "on_hand": 423,
+    "reserved": 29,
+    "reorder_point": 51,
+    "reorder_qty": 58,
+    "last_counted_at": "2025-07-13T12:00:00Z"
+  },
+  {
+    "id": 230,
+    "product_id": 230,
+    "warehouse": "W3-SAC",
+    "on_hand": 464,
+    "reserved": 30,
+    "reorder_point": 18,
+    "reorder_qty": 194,
+    "last_counted_at": "2025-02-17T12:00:00Z"
+  },
+  {
+    "id": 231,
+    "product_id": 231,
+    "warehouse": "W1-LA",
+    "on_hand": 108,
+    "reserved": 8,
+    "reorder_point": 10,
+    "reorder_qty": 136,
+    "last_counted_at": "2025-03-07T12:00:00Z"
+  },
+  {
+    "id": 232,
+    "product_id": 232,
+    "warehouse": "W1-LA",
+    "on_hand": 298,
+    "reserved": 45,
+    "reorder_point": 21,
+    "reorder_qty": 157,
+    "last_counted_at": "2025-05-13T12:00:00Z"
+  },
+  {
+    "id": 233,
+    "product_id": 233,
+    "warehouse": "W3-SAC",
+    "on_hand": 474,
+    "reserved": 23,
+    "reorder_point": 16,
+    "reorder_qty": 125,
+    "last_counted_at": "2025-04-14T12:00:00Z"
+  },
+  {
+    "id": 234,
+    "product_id": 234,
+    "warehouse": "W3-SAC",
+    "on_hand": 463,
+    "reserved": 50,
+    "reorder_point": 18,
+    "reorder_qty": 116,
+    "last_counted_at": "2025-08-24T12:00:00Z"
+  },
+  {
+    "id": 235,
+    "product_id": 235,
+    "warehouse": "W4-SD",
+    "on_hand": 332,
+    "reserved": 23,
+    "reorder_point": 55,
+    "reorder_qty": 178,
+    "last_counted_at": "2025-02-20T12:00:00Z"
+  },
+  {
+    "id": 236,
+    "product_id": 236,
+    "warehouse": "W4-SD",
+    "on_hand": 422,
+    "reserved": 26,
+    "reorder_point": 66,
+    "reorder_qty": 123,
+    "last_counted_at": "2025-01-24T12:00:00Z"
+  },
+  {
+    "id": 237,
+    "product_id": 237,
+    "warehouse": "W2-SF",
+    "on_hand": 70,
+    "reserved": 12,
+    "reorder_point": 58,
+    "reorder_qty": 90,
+    "last_counted_at": "2025-05-19T12:00:00Z"
+  },
+  {
+    "id": 238,
+    "product_id": 238,
+    "warehouse": "W3-SAC",
+    "on_hand": 351,
+    "reserved": 6,
+    "reorder_point": 47,
+    "reorder_qty": 80,
+    "last_counted_at": "2025-08-22T12:00:00Z"
+  },
+  {
+    "id": 239,
+    "product_id": 239,
+    "warehouse": "W1-LA",
+    "on_hand": 377,
+    "reserved": 17,
+    "reorder_point": 35,
+    "reorder_qty": 194,
+    "last_counted_at": "2025-05-05T12:00:00Z"
+  },
+  {
+    "id": 240,
+    "product_id": 240,
+    "warehouse": "W3-SAC",
+    "on_hand": 310,
+    "reserved": 6,
+    "reorder_point": 63,
+    "reorder_qty": 59,
+    "last_counted_at": "2025-07-07T12:00:00Z"
+  }
+]

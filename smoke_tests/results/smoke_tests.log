@@ -1,0 +1,122 @@
+
+JSON-LOOM Smoke Tests
+
+============================================================
+
+
+default_alias_id
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_default_alias_id.json
+Wrote preprocessor_default_alias_id.compiled.json
+
+  > OK
+
+
+
+field_qualified
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_field_qualified.json
+Wrote preprocessor_field_qualified.compiled.json
+
+  > OK
+
+
+
+whitespace_tolerance
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_whitespace_tolerance.json
+Wrote preprocessor_whitespace_tolerance.compiled.json
+
+  > OK
+
+
+
+alias_warn
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_strict_projection.json
+[weave warning] Alias: field 'no_such_field' not found
+Wrote preprocessor_strict_projection.compiled.json
+
+  > OK
+
+
+
+object_map_imports
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_object_map_imports.json
+Wrote preprocessor_object_map_imports.compiled.json
+
+  > OK
+
+
+
+alias_strict
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_strict_projection.json --strict-projection
+[loom error] Alias: field 'no_such_field' not found
+
+  > OK (expected failure)
+
+
+
+missing_record
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_missing_record.json
+[loom error] Missing record for order = 999
+
+  > OK (expected failure)
+
+
+
+unknown_alias
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_unknown_alias.json
+[loom error] Unknown alias 'orders' in $ref 'orders:1'
+
+  > OK (expected failure)
+
+
+
+circular_reference
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_circular_reference.json
+[loom error] Circular reference detected: a:1 -> b:2 -> a:1
+
+  > OK (expected failure)
+
+
+
+order_items_array
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_datalarge.json
+Wrote preprocessor_datalarge.compiled.json
+
+  > OK
+
+
+
+inventory_array
+------------------------------------------------------------
+  Cleaning old outputs...
+  Running: python ..\jsonloom.py preprocessor_inventory_array.json
+Wrote preprocessor_inventory_array.compiled.json
+
+  > OK
+
+
+************************************************************
+RESULTS
+------------------------------------------------------------
+Passed: 11
+Failed: 0
+************************************************************

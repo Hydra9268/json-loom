@@ -1,0 +1,13 @@
+{
+  "$imports": {
+    "customer": "data/customers.json"
+  },
+  "c_ok": {
+    "$ref": "customer:169",
+    "$alias": { "name": "customer_name" }
+  },
+  "c_fail": {
+    "$ref": "customer:169",
+    "$alias": { "no_such_field": "x" }
+  }
+}

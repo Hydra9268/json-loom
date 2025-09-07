@@ -1,0 +1,6 @@
+{
+  "$imports": {
+    "inventory": "data/large_inventory.json"
+  },
+  "inventory": { "$ref": "inventory.product_id: [119, 213, 123, 222]" }
+}

@@ -1,0 +1,4 @@
+[
+  { "id": 1, "customer_id": 169, "status": "confirmed" },
+  { "id": 2, "customer_id": 170, "status": "cancelled" }
+]

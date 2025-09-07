@@ -1,0 +1,11 @@
+{
+  "$imports": {
+    "order": "data/orders.json"
+  },
+  "x1": {
+    "$ref": "order:999"
+  },
+  "x2": {
+    "$ref": "order.customer_id:999"
+  }
+}

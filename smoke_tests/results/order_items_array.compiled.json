@@ -1,0 +1,40 @@
+{
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "product_id": 119,
+      "qty": 2,
+      "unit_price": 288.29,
+      "discount_percent": 0,
+      "tax_code": "GEN"
+    },
+    {
+      "id": 2,
+      "order_id": 1,
+      "product_id": 213,
+      "qty": 3,
+      "unit_price": 161.37,
+      "discount_percent": 0,
+      "tax_code": "GEN"
+    },
+    {
+      "id": 3,
+      "order_id": 1,
+      "product_id": 123,
+      "qty": 2,
+      "unit_price": 581.08,
+      "discount_percent": 15,
+      "tax_code": "FOOD"
+    },
+    {
+      "id": 4,
+      "order_id": 1,
+      "product_id": 222,
+      "qty": 1,
+      "unit_price": 238.15,
+      "discount_percent": 10,
+      "tax_code": "CLOT"
+    }
+  ]
+}

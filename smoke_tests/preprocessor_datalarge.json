@@ -1,0 +1,6 @@
+{
+  "$imports": {
+    "order_items": "data/large_order_items.json"
+  },
+  "order_items": { "$ref": "order_items.order_id: 1" }
+}
