@@ -41,6 +41,8 @@ document databases (e.g., MongoDB, CouchDB, Firestore). Think of it as **Sass fo
 
 - `$imports` for relational JSON or BSON sources
 - `$ref` syntax with flexible spacing (`product:1`, `product : 1`)
+- Field-qualified `$ref` (`alias.field: value`) returns an array of all matches
+- Array `$ref` (`alias.field: [v1, v2, ...]`) expands into multiple records
 - `$alias` to project/rename fields
 - Detects circular references and missing IDs
 - Validates aliases, IDs, and prevents duplicates
@@ -295,20 +297,82 @@ This approach works fine, even if the records inside `products.json` use `produc
 
 ### 🧩 `$ref`
 
-References a record from an imported file.
+References one or more records from an imported file.  
+Supports three forms:
+
+---
+
+#### Single ID
 Format: `"alias:id"` — whitespace around the alias or id is ignored.
 
 ```json
-"product": { "$ref": "product:1" },
+"product":  { "$ref": "product:1" },
 "category": { "$ref": "category: 10" },
 "supplier": { "$ref": "supplier  :   100" }
 ```
 
-**Is like (SQL primary key lookup / foreign key dereference):**
+**Is like (SQL primary key lookup):**
 
 ```sql
-SELECT * FROM products WHERE product_id = 1;
-SELECT * FROM suppliers WHERE supplier_id = 100;
+SELECT * FROM products  WHERE id = 1;
+SELECT * FROM categories WHERE id = 10;
+SELECT * FROM suppliers  WHERE id = 100;
+```
+
+---
+
+#### Field-qualified (returns all matches)
+
+Format: `"alias.field:value"`
+Fetches all records where the given field matches. Always returns an **array**.
+
+```json
+"order_items": { "$ref": "order_items.order_id: 1" }
+```
+
+**Is like:**
+
+```sql
+SELECT * FROM order_items WHERE order_id = 1;
+```
+
+**Compiled output:**
+
+```json
+"order_items": [
+  { "id": 1, "order_id": 1, "product_id": 119, "qty": 2, "unit_price": 288.29 },
+  { "id": 2, "order_id": 1, "product_id": 213, "qty": 3, "unit_price": 161.37 },
+  { "id": 3, "order_id": 1, "product_id": 123, "qty": 2, "unit_price": 581.08 },
+  { "id": 4, "order_id": 1, "product_id": 222, "qty": 1, "unit_price": 238.15 }
+]
+```
+
+---
+
+#### Array of values
+
+Format: `"alias.field:[v1, v2, ...]"`
+Fetches all records where the field is in the provided list of values. Returns an **array** of combined results.
+
+```json
+"inventory": { "$ref": "inventory.product_id: [119, 213, 123, 222]" }
+```
+
+**Is like (SQL IN clause):**
+
+```sql
+SELECT * FROM inventory WHERE product_id IN (119, 213, 123, 222);
+```
+
+**Compiled output:**
+
+```json
+"inventory": [
+  { "product_id": 119, "warehouse": "W3-SAC", "on_hand": 255, "reserved": 20 },
+  { "product_id": 213, "warehouse": "W2-SF", "on_hand": 323, "reserved": 9 },
+  { "product_id": 123, "warehouse": "W1-LA", "on_hand": 413, "reserved": 19 },
+  { "product_id": 222, "warehouse": "W2-SF", "on_hand": 171, "reserved": 38 }
+]
 ```
 
 ---
