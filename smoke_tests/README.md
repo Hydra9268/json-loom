@@ -1,8 +1,6 @@
 # 🧪 JSON-LOOM Smoke Tests
 
-This folder contains **smoke tests** for `jsonloom.py`.  
-They act like lightweight unit tests to verify that changes to the compiler
-don’t break existing functionality.
+This folder contains **smoke tests** for `jsonloom.py`. They act like lightweight unit tests to verify that changes to the compiler don’t break existing functionality.
 
 ## Running the tests
 
