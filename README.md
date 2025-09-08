@@ -208,12 +208,18 @@ This will:
 
 The suite covers both success and failure scenarios:
 
+**Expected to pass**
+
 * ✅ `preprocessor_default_alias_id.json` – default alias resolution
 * ✅ `preprocessor_field_qualified.json` – field-qualified `$ref`
 * ✅ `preprocessor_whitespace_tolerance.json` – spacing tolerance
 * ✅ `preprocessor_object_map_imports.json` – object map imports
 * ✅ `preprocessor_order_items_array.json` – multiple matches via `$ref`
 * ✅ `preprocessor_inventory_array.json` – array `$ref` syntax
+* ✅ `preprocessor_binary_copy.json` – creating a binary BSON copy
+
+**Expected to fail**
+
 * ❌ `preprocessor_strict_projection.json --strict-projection` – alias projection failure
 * ❌ `preprocessor_missing_record.json` – missing records
 * ❌ `preprocessor_unknown_alias.json` – unknown alias
